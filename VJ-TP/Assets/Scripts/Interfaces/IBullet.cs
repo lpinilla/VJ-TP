@@ -7,7 +7,8 @@ public interface IBullet
 
     float LifeTime { get; } //how long will it live
     float Speed { get; } // the bullet's speed
-		float drop { get; } //drop rate
+		float Drop { get; } //drop rate
+		float Damage { get; } //bullet's damage
 
 
     Rigidbody Rigidbody { get; } //bullet's rigidbody

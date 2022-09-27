@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Gun : MonoBehaviour, IGun
+public class BaseGun : MonoBehaviour, IGun
 {
     [SerializeField] private GunStats _stats;
 
