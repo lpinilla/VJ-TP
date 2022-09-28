@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class CmdAttack : ICommand
 {
-    private IGun _gun;
+    private IBaseGun _gun;
 
-    public CmdAttack(IGun gun)
-    {
+    public CmdAttack(IBaseGun gun) {
         _gun = gun;
     }
 
-    public void Execute()
-    {
+    public void Execute() {
         _gun.Attack();
-        //EventsManager.instance.AvatarChange(2);
     }
 }
