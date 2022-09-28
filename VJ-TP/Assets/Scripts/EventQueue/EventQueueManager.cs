@@ -14,14 +14,12 @@ public class EventQueueManager : MonoBehaviour
 
     [SerializeField] private bool _isPlayerFrozen;
 
-    private void Awake()
-    {
+    private void Awake() {
         if (instance != null) Destroy(this);
         instance = this;
     }
 
-    private void Update()
-    {
+    private void Update() {
         while (!IsQueueEmpty())
             _events.Dequeue().Execute();
 
