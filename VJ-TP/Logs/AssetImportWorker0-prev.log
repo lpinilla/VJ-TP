@@ -2,33 +2,29 @@ Unity Editor version:    2021.3.10f1 (1c7d0df0160b)
 Branch:                  2021.3/staging
 Build type:              Release
 Batch mode:              YES
-System name:             Linux
-Distro version:          #54-Ubuntu SMP Fri Aug 26 13:26:29 UTC 2022
-Kernel version:          5.15.0-48-generic
+macOS version:           Version 12.6 (Build 21G115)
+Darwin version:          21.6.0
 Architecture:            x86_64
-Available memory:        7809 MB
+Running under Rosetta:   YES
+Available memory:        32768 MB
 Using pre-set license
 Pro License: YES
 
-(Unity:37934): Gdk-CRITICAL **: 21:00:06.206: gdk_window_get_cursor: assertion 'GDK_IS_WINDOW (window)' failed
-Desktop is 1600 x 900 @ 60 Hz
-Initialize udev device monitor.
-
 COMMAND LINE ARGUMENTS:
-Unity
+/Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-/home/lautaro/Escritorio/itba_vj/VJ-TP/VJ-TP
+/Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-35969
-Successfully changed project path to: /home/lautaro/Escritorio/itba_vj/VJ-TP/VJ-TP
-/home/lautaro/Escritorio/itba_vj/VJ-TP/VJ-TP
+55943
+Successfully changed project path to: /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP
+/Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -58,185 +54,644 @@ Successfully changed project path to: /home/lautaro/Escritorio/itba_vj/VJ-TP/VJ-
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Unable to load player prefs
-Refreshing native plugins compatible for Editor in 92,66 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
+Refreshing native plugins compatible for Editor in 98.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.10f1 (1c7d0df0160b)
-[Subsystems] Discovering subsystems at path /root/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path /home/lautaro/Escritorio/itba_vj/VJ-TP/VJ-TP/Assets
-GLX Extensions: GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_visual_info GLX_EXT_visual_rating GLX_EXT_import_context GLX_SGI_video_sync GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGI_swap_control GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_buffer_age GLX_ARB_create_context GLX_ARB_create_context_profile GLX_NV_float_buffer GLX_ARB_fbconfig_float GLX_EXT_texture_from_pixmap GLX_EXT_framebuffer_sRGB GLX_NV_copy_image GLX_EXT_create_context_es_profile GLX_EXT_create_context_es2_profile GLX_ARB_create_context_no_error GLX_ARB_create_context_robustness GLX_NV_delay_before_swap GLX_EXT_stereo_tree GLX_ARB_context_flush_control GLX_NV_robustness_video_memory_purge GLX_NV_multigpu_context 
-Renderer: NVIDIA GeForce GTX 960/PCIe/SSE2
-Vendor:   NVIDIA Corporation
-Version:  4.5.0 NVIDIA 515.65.01
-GLES:     0
- GL_AMD_multi_draw_indirect GL_AMD_seamless_cubemap_per_texture GL_AMD_vertex_shader_viewport_index GL_AMD_vertex_shader_layer GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_indirect GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragmen
-t_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoki
-ng_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_locations GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_sparse_buffer GL_ARB_sparse_texture GL_ARB_sparse_texture2 GL_ARB_sparse_texture_clamp GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_A
-RB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_t
-ranspose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters 
-GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_multiview_texture_multisample GL_EXT_multiview_timer_query GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_polygon_offset_clamp GL_EXT_post_depth_coverage GL_EXT_provoking_vertex GL_EXT_raster_multisample GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shadow_funcs GL_EXT_sparse_texture2 GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_integer GL_EXT_texture_lod G
-L_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback2 GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_EXT_x11_sync_object GL_EXT_import_sync_object GL_NV_robustness_video_memory_purge GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_KHR_context_flush_control GL_KHR_debug GL_EXT_memory_object GL_EXT_memory_object_fd GL_NV_memory_object_sparse GL_KHR_parallel_shader_compile GL_KHR_no_error GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_EXT_semaphore GL_EXT_semaphore_fd GL_NV_timeline_semaphore GL_KHR_shader_subgroup GL_KTX_buffer_region GL_NV_alpha_to_coverage_dither_control GL_NV_bindless_multi_draw_indirect GL_NV_bindless_multi_draw_indirect_count GL_NV_bindless_texture GL_NV_blend_equation_advanced GL_NV_
-blend_equation_advanced_coherent GL_NV_blend_minmax_factor GL_NV_blend_square GL_NV_command_list GL_NV_compute_program5 GL_NV_conditional_render GL_NV_conservative_raster GL_NV_conservative_raster_dilate GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_depth_clamp GL_NV_draw_texture GL_NV_draw_vulkan_image GL_NV_ES1_1_compatibility GL_NV_ES3_1_compatibility GL_NV_explicit_multisample GL_NV_feature_query GL_NV_fence GL_NV_fill_rectangle GL_NV_float_buffer GL_NV_fog_distance GL_NV_fragment_coverage_to_color GL_NV_fragment_program GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_fragment_shader_interlock GL_NV_framebuffer_mixed_samples GL_NV_framebuffer_multisample_coverage GL_NV_geometry_shader4 GL_NV_geometry_shader_passthrough GL_NV_gpu_program4 GL_NV_internalformat_sample_query GL_NV_gpu_program4_1 GL_NV_gpu_program5 GL_NV_gpu_program5_mem_extended GL_NV_gpu_program_fp64 GL_NV_gpu_shader5 GL_NV_half_float GL_NV_light_max_exponent GL_NV_memory_attachment GL_NV_multisample_
-coverage GL_NV_multisample_filter_hint GL_NV_occlusion_query GL_NV_packed_depth_stencil GL_NV_parameter_buffer_object GL_NV_parameter_buffer_object2 GL_NV_path_rendering GL_NV_path_rendering_shared_edge GL_NV_pixel_data_range GL_NV_point_sprite GL_NV_primitive_restart GL_NV_query_resource GL_NV_query_resource_tag GL_NV_register_combiners GL_NV_register_combiners2 GL_NV_sample_locations GL_NV_sample_mask_override_coverage GL_NV_shader_atomic_counters GL_NV_shader_atomic_float GL_NV_shader_atomic_fp16_vector GL_NV_shader_atomic_int64 GL_NV_shader_buffer_load GL_NV_shader_storage_buffer_object GL_NV_shader_subgroup_partitioned GL_NV_texgen_reflection GL_NV_texture_barrier GL_NV_texture_compression_vtc GL_NV_texture_env_combine4 GL_NV_texture_multisample GL_NV_texture_rectangle GL_NV_texture_rectangle_compressed GL_NV_texture_shader GL_NV_texture_shader2 GL_NV_texture_shader3 GL_NV_transform_feedback GL_NV_transform_feedback2 GL_NV_uniform_buffer_unified_memory GL_NV_vdpau_interop GL_NV_vdpau_interop2 GL_NV_vert
-ex_array_range GL_NV_vertex_array_range2 GL_NV_vertex_attrib_integer_64bit GL_NV_vertex_buffer_unified_memory GL_NV_vertex_program GL_NV_vertex_program1_1 GL_NV_vertex_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_viewport_array2 GL_NV_viewport_swizzle GL_NVX_conditional_render GL_NV_gpu_multicast GL_NVX_progress_fence GL_NVX_gpu_memory_info GL_NVX_nvenc_interop GL_NV_shader_thread_group GL_NV_shader_thread_shuffle GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_OVR_multiview GL_OVR_multiview2 GL_SGIS_generate_mipmap GL_SGIS_texture_lod GL_SGIX_depth_texture GL_SGIX_shadow GL_SUN_slice_accum
-OPENGL LOG: Creating OpenGL 4.5 graphics device ; Context level  <OpenGL 4.5> ; Context handle 44495480
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M1 Max (high power)
+Metal devices available: 1
+0: Apple M1 Max (high power)
+Using device Apple M1 Max (high power)
+Initializing Metal device caps: Apple M1 Max
 Initialize mono
-Mono path[0] = '/root/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Managed'
-Mono path[1] = '/root/Unity/Hub/Editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
-Mono config path = '/root/Unity/Hub/Editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56934
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56436
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: /root/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: /root/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0,006854 seconds.
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 83,00 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.10f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Registered in 0.000597 seconds.
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 96.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0,753 seconds
+- Completed reload, in  1.551 seconds
 Domain Reload Profiling:
-	ReloadAssembly (754ms)
-		BeginReloadAssembly (184ms)
+	ReloadAssembly (1552ms)
+		BeginReloadAssembly (138ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (446ms)
-			LoadAssemblies (183ms)
+			CreateAndSetChildDomain (3ms)
+		EndReloadAssembly (1182ms)
+			LoadAssemblies (135ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (110ms)
+			SetupTypeCache (138ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (256ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (859ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (90ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (83ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (123ms)
-				ProcessInitializeOnLoadMethodAttributes (40ms)
+				RefreshPlugins (96ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (487ms)
+				ProcessInitializeOnLoadMethodAttributes (182ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0,004826 seconds.
+Registered in 0.002471 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /home/lautaro/Escritorio/itba_vj/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image /home/lautaro/Escritorio/itba_vj/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 3,83 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1,299 seconds
+- Completed reload, in  2.468 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1300ms)
-		BeginReloadAssembly (300ms)
+	ReloadAssembly (2470ms)
+		BeginReloadAssembly (249ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (22ms)
+			DisableScriptedObjects (43ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (50ms)
-		EndReloadAssembly (805ms)
-			LoadAssemblies (236ms)
-			RebuildTransferFunctionScriptingTraits (2ms)
-			SetupTypeCache (254ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (348ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (1927ms)
+			LoadAssemblies (121ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (343ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (1233ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (83ms)
-				ProcessInitializeOnLoadAttributes (219ms)
-				ProcessInitializeOnLoadMethodAttributes (29ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				InitializePlatformSupportModulesInManaged (70ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (136ms)
+				ProcessInitializeOnLoadAttributes (906ms)
+				ProcessInitializeOnLoadMethodAttributes (119ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0,67 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 3380 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 27 unused Assets / (75,1 KB). Loaded Objects now: 3837.
-Memory consumption went from 111,7 MB to 111,6 MB.
-Total: 3,605863 ms (FindLiveObjects: 0,388776 ms CreateObjectMapping: 0,120739 ms MarkObjects: 2,924322 ms  DeleteObjects: 0,170841 ms)
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3391 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (96.9 KB). Loaded Objects now: 3848.
+Memory consumption went from 230.2 MB to 230.1 MB.
+Total: 2.963958 ms (FindLiveObjects: 0.188125 ms CreateObjectMapping: 0.081125 ms MarkObjects: 2.550958 ms  DeleteObjects: 0.142666 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 11292,636061 seconds.
-  path: Packages/com.unity.visualscripting/package.json
-  artifactKey: Guid(545a9d2bc7370224f8d14c22f2f580e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.visualscripting/package.json using Guid(545a9d2bc7370224f8d14c22f2f580e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6444b2463e5a6be242c89e647dd68143') in 0,026071 seconds 
+  Time since last request: 72152.494176 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(55780529e240e4e1a86a12ff76bc93c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(55780529e240e4e1a86a12ff76bc93c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b85db46a722f067595388bdb2d14059e') in 0.008820 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002012 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.698 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2699ms)
+		BeginReloadAssembly (359ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (43ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (90ms)
+		EndReloadAssembly (2091ms)
+			LoadAssemblies (166ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (363ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (1339ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (94ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (115ms)
+				ProcessInitializeOnLoadAttributes (976ms)
+				ProcessInitializeOnLoadMethodAttributes (150ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.17 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3401 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (72.6 KB). Loaded Objects now: 3866.
+Memory consumption went from 230.7 MB to 230.6 MB.
+Total: 2.831959 ms (FindLiveObjects: 0.173750 ms CreateObjectMapping: 0.069541 ms MarkObjects: 2.486250 ms  DeleteObjects: 0.101500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 3,495864 seconds.
-  path: Packages/com.unity.ide.vscode/Editor/Unity.com.unity.vscode.Editor.asmdef
-  artifactKey: Guid(8b845b123ab418448a8be2935fa804e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ide.vscode/Editor/Unity.com.unity.vscode.Editor.asmdef using Guid(8b845b123ab418448a8be2935fa804e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee24f502f1831b8e657cb65f046e4c5a') in 0,000976 seconds 
+  Time since last request: 1940.981970 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e55ccaa32d8e5c1de03c07a5412c8c3c') in 0.008009 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001954 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.566 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2567ms)
+		BeginReloadAssembly (300ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (45ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (67ms)
+		EndReloadAssembly (2016ms)
+			LoadAssemblies (154ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (336ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (1307ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (98ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (117ms)
+				ProcessInitializeOnLoadAttributes (953ms)
+				ProcessInitializeOnLoadMethodAttributes (135ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.17 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3401 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (72.8 KB). Loaded Objects now: 3869.
+Memory consumption went from 230.9 MB to 230.8 MB.
+Total: 2.899459 ms (FindLiveObjects: 0.193959 ms CreateObjectMapping: 0.096583 ms MarkObjects: 2.536041 ms  DeleteObjects: 0.072250 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1,671869 seconds.
-  path: Packages/com.unity.ide.vscode/Editor/VSCodeDiscovery.cs
-  artifactKey: Guid(380f7372e785c7d408552e2c760d269d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ide.vscode/Editor/VSCodeDiscovery.cs using Guid(380f7372e785c7d408552e2c760d269d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6420df3cb914a85da50ed05be58ee3ad') in 0,000726 seconds 
+  Time since last request: 3644.740852 seconds.
+  path: Assets/Sci_Fi_Character_08
+  artifactKey: Guid(864480b1b33b644cd93c41c324e55ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08 using Guid(864480b1b33b644cd93c41c324e55ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e57853d8e5d925d661c7475def2f379') in 0.033248 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2,510724 seconds.
-  path: Packages/com.unity.ide.vscode/Editor/VSCodeScriptEditor.cs
-  artifactKey: Guid(ac3f13489022aa34d861a0320a6917b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ide.vscode/Editor/VSCodeScriptEditor.cs using Guid(ac3f13489022aa34d861a0320a6917b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ba0f3186839135652e90e6eafb1d6be') in 0,000707 seconds 
+  Time since last request: 2.426241 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials
+  artifactKey: Guid(09f7657ef025c874c903a5d2498eaca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials using Guid(09f7657ef025c874c903a5d2498eaca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96c4634c8d59f51002959b73d2012f26') in 0.002153 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1,320832 seconds.
-  path: Packages/com.unity.ide.vscode/Editor/ProjectGeneration
-  artifactKey: Guid(c779d3735d950f341ba35154e8b3234b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ide.vscode/Editor/ProjectGeneration using Guid(c779d3735d950f341ba35154e8b3234b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e1bf2286d36a7bacbbb763e2fa9c1cf') in 0,001041 seconds 
+  Time since last request: 3.716719 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Body
+  artifactKey: Guid(3126e3ff9495588438dd3aac89dced7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Body using Guid(3126e3ff9495588438dd3aac89dced7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd34cffe8b30d8955a720b9d2edb446d') in 0.002167 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6,251889 seconds.
-  path: Packages/com.unity.ide.vscode
-  artifactKey: Guid(1c61a04a5b7737c4d16673d64be4194e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ide.vscode using Guid(1c61a04a5b7737c4d16673d64be4194e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e94248d05651707ad8c86b4532d5ae2b') in 0,000678 seconds 
+  Time since last request: 0.055818 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Body/Sci_Fi_Character_08_Body_01.mat
+  artifactKey: Guid(deb27cc9699525f43ab356573cdc92b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Body/Sci_Fi_Character_08_Body_01.mat using Guid(deb27cc9699525f43ab356573cdc92b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7371b716f09580559e902bac827b61b') in 1.867649 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0,385480 seconds.
-  path: Packages/com.unity.ext.nunit
-  artifactKey: Guid(25a477c2f24db8778a4179421a32cc21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ext.nunit using Guid(25a477c2f24db8778a4179421a32cc21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bef33f36b89a5a284746f1bc5605769f') in 0,000708 seconds 
+  Time since last request: 0.000077 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Body/Sci_Fi_Character_08_Body_03.mat
+  artifactKey: Guid(ebcb06885163d35418f01b9fc06d0027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Body/Sci_Fi_Character_08_Body_03.mat using Guid(ebcb06885163d35418f01b9fc06d0027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e86f607d302f78d1bbd5c7bcba885c9') in 0.076561 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1,751103 seconds.
-  path: Packages/com.unity.editorcoroutines
-  artifactKey: Guid(1952614fce943faa675b00dec53d678b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.editorcoroutines using Guid(1952614fce943faa675b00dec53d678b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6183e2fc1d36e8947aa8d15f8bea9124') in 0,000675 seconds 
+  Time since last request: 2.565835 seconds.
+  path: Assets/Sci_Fi_Character_08/Scenes
+  artifactKey: Guid(c16c387bf2ac5ca419344bc1d7c05b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Scenes using Guid(c16c387bf2ac5ca419344bc1d7c05b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c73868719c22a51c425588cda3fa58fd') in 0.002060 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0,542176 seconds.
-  path: Packages/com.unity.ide.rider
-  artifactKey: Guid(ea5aa18a49e4f29d74984ea0ea11a238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ide.rider using Guid(ea5aa18a49e4f29d74984ea0ea11a238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de621c6b99382307b0489377b2f7421a') in 0,000751 seconds 
+  Time since last request: 1.267875 seconds.
+  path: Assets/Sci_Fi_Character_08/Scenes/Demo.unity
+  artifactKey: Guid(41d37f4166f4f497f80c4b84a54b34f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Scenes/Demo.unity using Guid(41d37f4166f4f497f80c4b84a54b34f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7c424ca30318f78ce7a3692bb30d077') in 0.001985 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002344 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.473 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2476ms)
+		BeginReloadAssembly (295ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (34ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (83ms)
+		EndReloadAssembly (1943ms)
+			LoadAssemblies (135ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (352ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (1235ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (85ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (114ms)
+				ProcessInitializeOnLoadAttributes (911ms)
+				ProcessInitializeOnLoadMethodAttributes (122ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3401 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (72.7 KB). Loaded Objects now: 3913.
+Memory consumption went from 240.4 MB to 240.3 MB.
+Total: 2.915042 ms (FindLiveObjects: 0.184583 ms CreateObjectMapping: 0.074333 ms MarkObjects: 2.562250 ms  DeleteObjects: 0.092708 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0,343714 seconds.
-  path: Packages/com.unity.nuget.newtonsoft-json
-  artifactKey: Guid(7e7d2b05dd6ea119ce16861d56d99a82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.nuget.newtonsoft-json using Guid(7e7d2b05dd6ea119ce16861d56d99a82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58e51e9bf051a9b8b1858b5f76233e6c') in 0,000589 seconds 
+  Time since last request: 42.641285 seconds.
+  path: Assets/Sci_Fi_Character_08/Mesh/Sci_Fi_Character_08_Arms.FBX
+  artifactKey: Guid(e88dcd6540285124689c0a7131b21fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Mesh/Sci_Fi_Character_08_Arms.FBX using Guid(e88dcd6540285124689c0a7131b21fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '865394f0a248ac0f4c13dfbc91c64478') in 1.012049 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.086457 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9669172c9ad9d0e48fb048cebe95d26') in 0.004478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.739195 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Stand/Stand.mat
+  artifactKey: Guid(40b670e846ef7764086cbae98510396b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Stand/Stand.mat using Guid(40b670e846ef7764086cbae98510396b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4798533cfcfe25421393430e256e6cc8') in 0.275882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.016850 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Sniper_Rifle/Sniper_Rifle_01.mat
+  artifactKey: Guid(976c28b9735e83c4ca0f371653414029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Sniper_Rifle/Sniper_Rifle_01.mat using Guid(976c28b9735e83c4ca0f371653414029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43e818bc0ea8bd7551bcad67f99fd73f') in 0.182291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Sniper_Rifle/Sniper_Rifle_Cloth_03.mat
+  artifactKey: Guid(a57a734db9061104bafffa4d48babb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Sniper_Rifle/Sniper_Rifle_Cloth_03.mat using Guid(a57a734db9061104bafffa4d48babb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0afe27b726ae2a830af5ba5e19e64b4a') in 0.362289 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Sniper_Rifle/Sniper_Rifle_03.mat
+  artifactKey: Guid(2a8c3927022e9364cbf00e30f96e9e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Sniper_Rifle/Sniper_Rifle_03.mat using Guid(2a8c3927022e9364cbf00e30f96e9e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04e96675da93d20d8f7b34002cae25c5') in 0.056672 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.486033 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Head/Sci_Fi_Character_08_Head_01.mat
+  artifactKey: Guid(3944885e2ed7e67418a682b36827e6b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Head/Sci_Fi_Character_08_Head_01.mat using Guid(3944885e2ed7e67418a682b36827e6b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2891c0e85b7c81cdf39042c37a91df9') in 0.084414 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Head/Sci_Fi_Character_08_Head_04.mat
+  artifactKey: Guid(8fff8cc442662c949bb1a55b3023dbdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Head/Sci_Fi_Character_08_Head_04.mat using Guid(8fff8cc442662c949bb1a55b3023dbdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e884053cd3bb1a1d64e2521cc03e1a10') in 0.070247 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Head/Sci_Fi_Character_08_Head_06.mat
+  artifactKey: Guid(3cd289058e5974e43b76ffe516d81f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Head/Sci_Fi_Character_08_Head_06.mat using Guid(3cd289058e5974e43b76ffe516d81f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3b9c5f881050fe2bfb7afaee60e37cd') in 0.064763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.833781 seconds.
+  path: Assets/Sci_Fi_Character_08/Mesh
+  artifactKey: Guid(06b419e5aef6ae14ea27ade0b9e863e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Mesh using Guid(06b419e5aef6ae14ea27ade0b9e863e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0214249160e89f72d8b0328b97aa8720') in 0.001288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.215434 seconds.
+  path: Assets/Sci_Fi_Character_08/Mesh/Sniper_Rifle.FBX
+  artifactKey: Guid(7a87af26307813a499463f5a002b764d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Mesh/Sniper_Rifle.FBX using Guid(7a87af26307813a499463f5a002b764d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c186aa2ddb7fa6b5feb4c8bcf29fe14') in 0.201718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 126.538315 seconds.
+  path: Assets/Sci_Fi_Character_08/Materials/Details/Sci_Fi_Character_08_Details_01.mat
+  artifactKey: Guid(dbab803476607b44eb7b341e6321ee22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Materials/Details/Sci_Fi_Character_08_Details_01.mat using Guid(dbab803476607b44eb7b341e6321ee22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27e7a4c9c7c41262989aa9cb9557b88d') in 0.086270 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 74.073369 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Body
+  artifactKey: Guid(0b611c35db2480d4b9f9118079bff709) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Body using Guid(0b611c35db2480d4b9f9118079bff709) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0913149e8508723510f38511c7ec66b7') in 0.001211 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.822243 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Body/Sci_Fi_Character_08_Body_Albedo_01.tga
+  artifactKey: Guid(a1147c594d4947047b6499fc821b5e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Body/Sci_Fi_Character_08_Body_Albedo_01.tga using Guid(a1147c594d4947047b6499fc821b5e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf0405d20489a61bd5db029cc9d72ad') in 0.764651 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Body/Sci_Fi_Character_08_Body_Albedo_03.tga
+  artifactKey: Guid(285ef96cde3e1c34c91cd66be85d17d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Body/Sci_Fi_Character_08_Body_Albedo_03.tga using Guid(285ef96cde3e1c34c91cd66be85d17d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8ffb9d1741db014c8e6cdc2426514b0') in 0.017961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Body/Sci_Fi_Character_08_Body_Normals.tga
+  artifactKey: Guid(308aae94a5308ae42ba4c951eb11071b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Body/Sci_Fi_Character_08_Body_Normals.tga using Guid(308aae94a5308ae42ba4c951eb11071b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ac35e65b22eb5be18b3dbf763289d78') in 0.060459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 80.536715 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Details/Sci_Fi_Character_08_Details_Albedo_01.tga
+  artifactKey: Guid(1a8bf427d4407334a886a3f6298f1621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Details/Sci_Fi_Character_08_Details_Albedo_01.tga using Guid(1a8bf427d4407334a886a3f6298f1621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e9ba34eeb94bfeaf19d5553cea23851') in 0.026826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Details/Sci_Fi_Character_08_Details_Albedo_03.tga
+  artifactKey: Guid(0c2fcb0b66102d74da20c6601234cef0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Details/Sci_Fi_Character_08_Details_Albedo_03.tga using Guid(0c2fcb0b66102d74da20c6601234cef0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b83818e484ee81b64225fbdcdde56b76') in 0.015658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Details/Sci_Fi_Character_08_Details_Normals.tga
+  artifactKey: Guid(5fb7d2e0bf90c36498559b5a9072960a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Details/Sci_Fi_Character_08_Details_Normals.tga using Guid(5fb7d2e0bf90c36498559b5a9072960a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29718351f95b33ef40a9da959549f19c') in 0.022731 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002446 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.419 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2421ms)
+		BeginReloadAssembly (262ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (34ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (63ms)
+		EndReloadAssembly (1921ms)
+			LoadAssemblies (119ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (341ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (1229ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (85ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (115ms)
+				ProcessInitializeOnLoadAttributes (901ms)
+				ProcessInitializeOnLoadMethodAttributes (124ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3401 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (72.7 KB). Loaded Objects now: 3925.
+Memory consumption went from 262.6 MB to 262.5 MB.
+Total: 2.497542 ms (FindLiveObjects: 0.196208 ms CreateObjectMapping: 0.074125 ms MarkObjects: 2.141000 ms  DeleteObjects: 0.085459 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002646 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.410 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2413ms)
+		BeginReloadAssembly (266ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (39ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (60ms)
+		EndReloadAssembly (1910ms)
+			LoadAssemblies (118ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (336ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (1226ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (88ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (110ms)
+				ProcessInitializeOnLoadAttributes (878ms)
+				ProcessInitializeOnLoadMethodAttributes (148ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.02 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3401 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (72.7 KB). Loaded Objects now: 3928.
+Memory consumption went from 262.8 MB to 262.7 MB.
+Total: 2.521458 ms (FindLiveObjects: 0.195209 ms CreateObjectMapping: 0.085167 ms MarkObjects: 2.161833 ms  DeleteObjects: 0.078417 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 420.073652 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Albedo_01.tga
+  artifactKey: Guid(999b40eed049cb14d9b44aeba68b92b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Albedo_01.tga using Guid(999b40eed049cb14d9b44aeba68b92b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a58c1c40c7510d623dfc167dbbfa7fd6') in 0.121875 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Metallic.tga
+  artifactKey: Guid(00d3956e191e0cf44a4617be664cd697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Metallic.tga using Guid(00d3956e191e0cf44a4617be664cd697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a66049859a1a6fc95b968528fe44c0ba') in 0.038667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Ao.tga
+  artifactKey: Guid(367eb290efa0fb347a859edce724201c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Ao.tga using Guid(367eb290efa0fb347a859edce724201c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfb4e98103f71a03493c931eb68a3003') in 0.035514 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Albedo_04.tga
+  artifactKey: Guid(f33839e0ee502ac439db5c28799a5eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Albedo_04.tga using Guid(f33839e0ee502ac439db5c28799a5eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b34fd8d8e5a754bd05a981c33e93ca0') in 0.016710 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Albedo_03.tga
+  artifactKey: Guid(dbf1a28e4e0fdaf4680e154a73d3d994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Albedo_03.tga using Guid(dbf1a28e4e0fdaf4680e154a73d3d994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfe9c9e53761ec555a0bd322eea02dbd') in 0.015897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Emissive.tga
+  artifactKey: Guid(1ce53e215a57fdb4a9b227fdd578dd37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Head/Sci_FI_Character_08_Head_Emissive.tga using Guid(1ce53e215a57fdb4a9b227fdd578dd37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b47837e54cc2b37390b78e82e44a61ef') in 0.015847 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.550697 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Albedo_01.tga
+  artifactKey: Guid(aeec54d9902d5ce409ce45530cbd42c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Albedo_01.tga using Guid(aeec54d9902d5ce409ce45530cbd42c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4d10b98050668e1d5fd2741e1dc47dd') in 0.019984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Normals.tga
+  artifactKey: Guid(0103b09fdea500844b2b7d5f7c7efd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Normals.tga using Guid(0103b09fdea500844b2b7d5f7c7efd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9f322b1f5439257a334a762abe0ff32') in 0.029444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Cloth_Albedo_03.tga
+  artifactKey: Guid(6475a532ed74a1c438e77099f511f97f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Cloth_Albedo_03.tga using Guid(6475a532ed74a1c438e77099f511f97f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfd02c95ec69717495c259d7b42461a5') in 0.022298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Cloth_Normals.tga
+  artifactKey: Guid(7b7173dfa2b0d5440a5a893eb06c4fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Cloth_Normals.tga using Guid(7b7173dfa2b0d5440a5a893eb06c4fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c57eb7f56f3a2bbc14f4a37ca4d6db9') in 0.023924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Cloth_Metallic.tga
+  artifactKey: Guid(cf5173d4d3012da488f31023df42dd39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Cloth_Metallic.tga using Guid(cf5173d4d3012da488f31023df42dd39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de71d61e623bc2d58b4f2b7ffd1b5e1c') in 0.023132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Albedo_03.tga
+  artifactKey: Guid(c0b86ed39b70892408f87bb4c2563cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci_Fi_Character_08/Textures/Sniper_Rifle/Sniper_Rifle_Albedo_03.tga using Guid(c0b86ed39b70892408f87bb4c2563cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2587cd2bf170c488e833b71e419fefc') in 0.016276 seconds 
