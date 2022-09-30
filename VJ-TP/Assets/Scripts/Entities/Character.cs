@@ -49,6 +49,7 @@ public class Character : Actor
         _cmdRotateLeft = new CmdRotation(_movementController, -Vector3.up);
         _cmdRotateRight = new CmdRotation(_movementController, Vector3.up);
         _cmdJump = new CmdJump(_movementController);
+				_cmdAttack = new CmdAttack(_guns[0]);
 				//_cmdInteract = object the player is looking at
     }
 
@@ -61,7 +62,7 @@ public class Character : Actor
         if (Input.GetKey(_moveBack))    EventQueueManager.instance.AddMovementCommand(_cmdMoveBack);
         if (Input.GetKey(_moveLeft))    EventQueueManager.instance.AddMovementCommand(_cmdRotateLeft);
         if (Input.GetKey(_moveRight))   EventQueueManager.instance.AddMovementCommand(_cmdRotateRight);
-        if (Input.GetKey(_jump))				EventQueueManager.instance.AddMovementCommand(_cmdJump);
+        if (Input.GetKey(_jump)) EventQueueManager.instance.AddMovementCommand(_cmdJump);
 
 				//Add interact command to queue
 				if (Input.GetKey(_interact))		EventQueueManager.instance.AddCommand(_cmdInteract);
@@ -87,4 +88,5 @@ public class Character : Actor
         _cmdAttack = new CmdAttack(_currentGun);
         EventsManager.instance.WeaponChange(index);
     }
+
 }

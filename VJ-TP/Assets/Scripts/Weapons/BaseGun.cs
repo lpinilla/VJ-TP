@@ -12,7 +12,8 @@ public class BaseGun : MonoBehaviour, IBaseGun
     public int BulletCount => _bulletCount;
     [SerializeField] protected int _bulletCount;
 
-	public float Cooldown => _stats.Cooldown;
+		public float Cooldown => _stats.Cooldown;
+		public GameObject TESTBullet;
 
     private void Start() {
         Reload();
@@ -22,7 +23,7 @@ public class BaseGun : MonoBehaviour, IBaseGun
         if (_bulletCount > 0) {
 					//put a bullet into scene
             var bullet = Instantiate(
-                BulletPrefab,
+                TESTBullet,
                 transform.position,
                 transform.rotation);
             bullet.name = "Bullet";

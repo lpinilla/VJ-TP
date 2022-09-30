@@ -22,7 +22,7 @@ AssetImportWorker1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-63181
+64522
 Successfully changed project path to: /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP
 /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,7 +54,7 @@ Successfully changed project path to: /Users/arolandelli/Documents/GitHub/VJ-TP/
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 95.92 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 97.88 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.10f1 (1c7d0df0160b)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -69,96 +69,96 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56095
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56883
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.10f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Registered in 0.000655 seconds.
+Registered in 0.000753 seconds.
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 [usbmuxd] Send listen message
 Native extension for iOS target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 105.22 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 101.19 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.639 seconds
+- Completed reload, in  1.478 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1641ms)
-		BeginReloadAssembly (140ms)
+	ReloadAssembly (1479ms)
+		BeginReloadAssembly (122ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (1253ms)
-			LoadAssemblies (137ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1126ms)
+			LoadAssemblies (121ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (137ms)
+			SetupTypeCache (139ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (925ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (815ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (89ms)
+				InitializePlatformSupportModulesInManaged (77ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (105ms)
+				RefreshPlugins (101ms)
 				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (531ms)
-				ProcessInitializeOnLoadMethodAttributes (196ms)
+				ProcessInitializeOnLoadAttributes (462ms)
+				ProcessInitializeOnLoadMethodAttributes (170ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002087 seconds.
+Registered in 0.002096 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/arolandelli/Documents/GitHub/VJ-TP/VJ-TP/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for iOS target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.610 seconds
+- Completed reload, in  2.350 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2612ms)
-		BeginReloadAssembly (251ms)
+	ReloadAssembly (2353ms)
+		BeginReloadAssembly (234ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (37ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (2058ms)
-			LoadAssemblies (126ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (1839ms)
+			LoadAssemblies (112ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (348ms)
+			SetupTypeCache (347ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (63ms)
-			SetupLoadedEditorAssemblies (1356ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (1157ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (70ms)
+				InitializePlatformSupportModulesInManaged (60ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (136ms)
-				ProcessInitializeOnLoadAttributes (987ms)
-				ProcessInitializeOnLoadMethodAttributes (160ms)
+				BeforeProcessingInitializeOnLoad (132ms)
+				ProcessInitializeOnLoadAttributes (851ms)
+				ProcessInitializeOnLoadMethodAttributes (111ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2021.3.10f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3411 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 27 unused Assets / (97.0 KB). Loaded Objects now: 3871.
-Memory consumption went from 233.4 MB to 233.3 MB.
-Total: 3.136417 ms (FindLiveObjects: 0.226959 ms CreateObjectMapping: 0.083334 ms MarkObjects: 2.686500 ms  DeleteObjects: 0.138375 ms)
+Unloading 27 unused Assets / (96.9 KB). Loaded Objects now: 3871.
+Memory consumption went from 233.2 MB to 233.1 MB.
+Total: 3.015250 ms (FindLiveObjects: 0.157333 ms CreateObjectMapping: 0.077542 ms MarkObjects: 2.653750 ms  DeleteObjects: 0.125500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -172,146 +172,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 84313.017332 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Pillars and Beams/Pillar.prefab
-  artifactKey: Guid(811bf22db94faad418fb6fdfffe14569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Pillars and Beams/Pillar.prefab using Guid(811bf22db94faad418fb6fdfffe14569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '965e62322352eb202f0bc64cd75d294d') in 0.299704 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 54.541040 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor 4-Way.prefab
-  artifactKey: Guid(74c0dfff25c1f104382fcabf0479898d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor 4-Way.prefab using Guid(74c0dfff25c1f104382fcabf0479898d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5d6470149d4150865e81b6c5f8ec027') in 0.053771 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000067 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Wide Corner Windows.prefab
-  artifactKey: Guid(5ceb30273fce6374fadb842df014e681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Wide Corner Windows.prefab using Guid(5ceb30273fce6374fadb842df014e681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45372dc5be33af341adf52a1e5b1f9ea') in 0.074081 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Wide.prefab
-  artifactKey: Guid(a57680777d3403843b1e6d4a5b05e5fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Wide.prefab using Guid(a57680777d3403843b1e6d4a5b05e5fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91600adff91cc0e3b53fb5b39ae55a68') in 0.028702 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Deadend Window.prefab
-  artifactKey: Guid(4f1819ea97fb2c147a2281df45df2ea7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Deadend Window.prefab using Guid(4f1819ea97fb2c147a2281df45df2ea7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a39ca3433cc752f8308d2df8b65bed6') in 0.024797 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000063 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Wide Corner.prefab
-  artifactKey: Guid(01c384aacd76e1742a420e899cfbca6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Wide Corner.prefab using Guid(01c384aacd76e1742a420e899cfbca6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d52664d96323f853cbf73c23fb331c7') in 0.027819 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000081 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Doors.prefab
-  artifactKey: Guid(2786dfa44f873aa478bb54f2d68fcc64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Doors.prefab using Guid(2786dfa44f873aa478bb54f2d68fcc64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a1db11dbd5e4c3d8a5dc38d28db2184') in 0.037528 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Wide Windows.prefab
-  artifactKey: Guid(ac2dfbe7f68dc634f86cd6efc408d4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Wide Windows.prefab using Guid(ac2dfbe7f68dc634f86cd6efc408d4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7646b2b54ccbd5a2bf585adc750522b1') in 0.037120 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Passthrough Windows.prefab
-  artifactKey: Guid(91b8fa9065e2bc041ba30dded191b2a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Passthrough Windows.prefab using Guid(91b8fa9065e2bc041ba30dded191b2a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f67dbd06b3c6e0d71064567c7f20c669') in 0.031210 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Corner.prefab
-  artifactKey: Guid(0caa079a07bb6bb4d8189cbe94d69429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors/Corridor Corner.prefab using Guid(0caa079a07bb6bb4d8189cbe94d69429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d9808fb63aa6483f8000fcccedbba7b') in 0.029542 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 55.927994 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Walls/Wall Corner.prefab
-  artifactKey: Guid(32467b8dc355cd04da356b17dbac4f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Walls/Wall Corner.prefab using Guid(32467b8dc355cd04da356b17dbac4f29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25a25dc65e7e4872cdd2e1a3f16a64b3') in 0.018665 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000108 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Walls/Wall Door 02.prefab
-  artifactKey: Guid(01f7094c0e795ad47b0ef77f3cf2ae66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Walls/Wall Door 02.prefab using Guid(01f7094c0e795ad47b0ef77f3cf2ae66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49dfd65ae66f73a839299744c19264ba') in 0.021296 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000063 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Walls/Wall Corridor.prefab
-  artifactKey: Guid(cd25cf3d7c6ff0e4cb4a7056c87c3ba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Walls/Wall Corridor.prefab using Guid(cd25cf3d7c6ff0e4cb4a7056c87c3ba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10ea952e2da88f0757b0186aad6570c8') in 0.016572 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000062 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Walls/Wall Fan.prefab
-  artifactKey: Guid(0a65198f3cbcab345bc0b33f23a45e76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Walls/Wall Fan.prefab using Guid(0a65198f3cbcab345bc0b33f23a45e76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f68702225b1418c17ebae5f926bdac') in 0.044919 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Walls/Wall Door.prefab
-  artifactKey: Guid(dafe2f44374925b4692cd6dbc587c068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Walls/Wall Door.prefab using Guid(dafe2f44374925b4692cd6dbc587c068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '947aa9ae7031fc91e2047601fa2c0c16') in 0.018363 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 657.868725 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Fusebox 01.prefab
-  artifactKey: Guid(3c19fd38539b7f04b90d35983ebc23cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Fusebox 01.prefab using Guid(3c19fd38539b7f04b90d35983ebc23cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adfe5b889d23e9be88d1d0417c870968') in 0.016279 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000093 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Pipes 03.prefab
-  artifactKey: Guid(007da77ee19ebc4459a5d9eb2fc1348a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Pipes 03.prefab using Guid(007da77ee19ebc4459a5d9eb2fc1348a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1177804d2b4e3374d284cff03fd6d888') in 0.013166 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Sprinkler 02.prefab
-  artifactKey: Guid(249530fa23afe5f449b15ecf96228a4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Sprinkler 02.prefab using Guid(249530fa23afe5f449b15ecf96228a4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd50809414fb69425c79ca385feb27cdb') in 0.011589 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Sprinkler 05.prefab
-  artifactKey: Guid(0938980ccd4548d498afb52f86efc01c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Sprinkler 05.prefab using Guid(0938980ccd4548d498afb52f86efc01c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd011f5194d87d2e391a49d0c1e6baec') in 0.012324 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Sprinkler 06.prefab
-  artifactKey: Guid(31452322714d2494d8edd50f507c751a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Sprinkler 06.prefab using Guid(31452322714d2494d8edd50f507c751a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e79471a6785de8416a7f12c74e92d7b4') in 0.012375 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Pipes 06.prefab
-  artifactKey: Guid(68b56f98a24210a4e82f6c092adcd68e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Pipes 06.prefab using Guid(68b56f98a24210a4e82f6c092adcd68e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97d6fac7aaa355646a1e0ef2377ef4a6') in 0.013610 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Sprinkler 01.prefab
-  artifactKey: Guid(e80d0380ecc96af42b77e3ca3a7faf8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Sprinkler 01.prefab using Guid(e80d0380ecc96af42b77e3ca3a7faf8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3db458f1865ebfdaea7b1d9ba1308763') in 0.011255 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Sprinkler 03.prefab
-  artifactKey: Guid(68c6dd8e7dfcdad4d9d3341eee9c5601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Structure Props/Sprinkler 03.prefab using Guid(68c6dd8e7dfcdad4d9d3341eee9c5601) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '003076f20c84b36fb7f4810fe95fea80') in 0.011761 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.756742 seconds.
-  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Ceiling/Ceiling Skylight.prefab
-  artifactKey: Guid(407e4e65456601c4ba66e0697b1c325c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Ceiling/Ceiling Skylight.prefab using Guid(407e4e65456601c4ba66e0697b1c325c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'add3bada38778bc7a0d91050a2289059') in 0.030242 seconds 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+  Time since last request: 86041.654370 seconds.
+  path: Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors
+  artifactKey: Guid(763e69c2509fe904facb82745ef7751c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SciFi Warehouse Kit/Prefabs/Structures/Corridors using Guid(763e69c2509fe904facb82745ef7751c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d47b7f821f86e263aea6dd4afce5a76') in 0.008829 seconds 

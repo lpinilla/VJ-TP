@@ -15,10 +15,10 @@ public class Bullet : MonoBehaviour, IBullet
     [SerializeField] private BaseGun _owner;
 
     public Rigidbody Rigidbody => _rigidbody;
-    [SerializeField] private Rigidbody _rigidbody;
+    private Rigidbody _rigidbody;
 
     public Collider Collider => _collider;
-    [SerializeField] private Collider _collider;
+    private Collider _collider;
 
     [SerializeField] private List<int> _layerTarget;
 
