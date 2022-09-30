@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gunStatsValues:
     BulletPrefab: {fileID: 0}
-    Damage: 0
-    MagSize: 0
-    Cooldown: 0
-    BulletDrop: 0
+    Damage: 10
+    MagSize: 10
+    Cooldown: 1
+    BulletDrop: 0.1

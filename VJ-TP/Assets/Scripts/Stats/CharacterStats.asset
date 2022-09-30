@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: CharacterStats
   m_EditorClassIdentifier: 
   _statValues:
-    MaxLife: 0
-    MovementSpeed: 0
-    RotationSpeed: 0
-    JumpHeight: 0
+    MaxLife: 100
+    MovementSpeed: 10
+    RotationSpeed: 100
+    JumpHeight: 10
+    FlyThreshold: 1
