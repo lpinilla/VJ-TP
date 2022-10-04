@@ -9,7 +9,7 @@ public class ActorStats : ScriptableObject
     public float MovementSpeed => _statValues.MovementSpeed;
     public float RotationSpeed => _statValues.RotationSpeed;
     public float JumpHeight => _statValues.JumpHeight;
-		public float FlyThreshold => _statValues.FlyThreshold;
+		public float RayCastHeightOffset => _statValues.RayCastHeightOffset;
 }
 
 [System.Serializable]
@@ -19,5 +19,5 @@ public struct ActorStatValues
     public float MovementSpeed;
     public float RotationSpeed;
 		public float JumpHeight;
-		public float FlyThreshold;
+		public float RayCastHeightOffset;
 }
