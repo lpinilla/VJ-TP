@@ -5,11 +5,11 @@ public class GlobalStats : ScriptableObject
 {
     [SerializeField] private GlobalStatValues _statValues;
 
-		public float Gravity => _statValues.gravity;
+		public float Gravity => _statValues.Gravity;
 }
 
 [System.Serializable]
 public struct GlobalStatValues
 {
-		public float gravity;
+		public float Gravity;
 }

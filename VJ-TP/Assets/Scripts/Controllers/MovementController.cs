@@ -15,7 +15,7 @@ public class MovementController : MonoBehaviour, IMoveable {
 		[SerializeField] private GlobalStats globalStats;
 		public float Gravity => globalStats.Gravity;
 
-		public Camera main_camera;
+		[SerializeField] private Camera main_camera;
 
 		[SerializeField] private LayerMask targetLayer;
 		[SerializeField] private float playerHeightOffset = 1f;
