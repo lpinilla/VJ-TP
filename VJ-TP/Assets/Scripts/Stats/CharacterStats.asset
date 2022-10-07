@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _statValues:
     MaxLife: 100
-    MovementSpeed: 10
+    MovementSpeed: 15
     RotationSpeed: 100
-    JumpHeight: 15
-    RayCastHeightOffset: 0.4
+    JumpHeight: 10
+    RayCastHeightOffset: -0.5
+    CameraSensitivity: 10

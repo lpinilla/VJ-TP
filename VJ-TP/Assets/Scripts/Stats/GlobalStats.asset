@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GlobalStats
   m_EditorClassIdentifier: 
   _statValues:
-    gravity: 25
+    gravity: 30

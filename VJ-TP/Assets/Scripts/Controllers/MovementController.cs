@@ -2,14 +2,14 @@ using UnityEngine;
 
 [RequireComponent(typeof(Actor))]
 [RequireComponent(typeof(Rigidbody))]
-public class MovementController : MonoBehaviour, IMoveable
-{
+public class MovementController : MonoBehaviour, IMoveable {
 
 		//user stats
     public float Speed => GetComponent<Actor>().ActorStats.MovementSpeed;
     public float RotationSpeed => GetComponent<Actor>().ActorStats.RotationSpeed;
     public float JumpHeight => GetComponent<Actor>().ActorStats.JumpHeight;
 		public float RayCastHeightOffset => GetComponent<Actor>().ActorStats.RayCastHeightOffset;
+		public float CameraSensitivity => GetComponent<Actor>().ActorStats.CameraSensitivity;
 
 		//global stats
 		[SerializeField] private GlobalStats globalStats;
@@ -18,6 +18,8 @@ public class MovementController : MonoBehaviour, IMoveable
 		public Camera main_camera;
 
 		[SerializeField] private LayerMask targetLayer;
+		[SerializeField] private float playerHeightOffset = 1f;
+		[SerializeField] private float raycastMaxDistance = 0.6f;
 
 		private Rigidbody rigidbody;
 		private RaycastHit hit;
@@ -34,23 +36,27 @@ public class MovementController : MonoBehaviour, IMoveable
     public void Travel(Vector3 direction){
 			Vector3 newDir = main_camera.transform.TransformDirection(direction * Time.deltaTime * Speed);
 			newDir.y = 0f;
-			transform.Translate(newDir, Space.World);
+			//shoot raycast in the direction we are looking at, if we found something, ignore movement
+			Debug.DrawRay(transform.position, newDir * 10f, Color.red);
+			if(!Physics.Raycast(transform.position, newDir, out hit, raycastMaxDistance)){
+				transform.Translate(newDir, Space.World);
+			}
 		}
-    public void Rotate(Vector3 direction)
-        => transform.Rotate(direction * Time.deltaTime * RotationSpeed);
 
-		public void Jump(){
-			rigidbody.AddForce(Vector3.up * Gravity * JumpHeight);
+    public void Rotate(Vector3 direction){
+			transform.localEulerAngles = direction * CameraSensitivity;
 		}
+
+		public void Jump() => rigidbody.AddForce(Vector3.up * Gravity * JumpHeight);
 
 		public bool isFlying(){
 			//calculate the origin from where the raycast will be thrown
 			raycastOrigin = transform.position;
 			raycastOrigin.y += RayCastHeightOffset;
 			targetPosition = transform.position;
-			//shoot raycast
-			if(Physics.SphereCast(raycastOrigin, 0.2f, Vector3.down, out hit, targetLayer)){
-				targetPosition.y = hit.point.y + 1f;
+			//Draw Spherecast
+			if(Physics.Raycast(raycastOrigin, Vector3.down, out hit, raycastMaxDistance)){
+				targetPosition.y = hit.point.y + playerHeightOffset;
 				transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime);
 				rigidbody.velocity = Vector3.zero;
 				airTimer = 0f;
@@ -60,7 +66,7 @@ public class MovementController : MonoBehaviour, IMoveable
 			return true;
 		}
 
-		public void Update(){
+		void FixedUpdate(){
 			if (isFlying()) Fall();
 		}
 
