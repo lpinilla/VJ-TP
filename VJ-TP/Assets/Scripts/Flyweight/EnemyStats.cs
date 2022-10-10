@@ -6,10 +6,12 @@ public class EnemyStats : ScriptableObject
     [SerializeField] private EnemyStatValues _statValues;
 
 		public float DetectionRange => _statValues.DetectionRange;
+		public float AttackRange		=> _statValues.AttackRange;
 }
 
 [System.Serializable]
 public struct EnemyStatValues
 {
 		public float DetectionRange;
+		public float AttackRange;
 }

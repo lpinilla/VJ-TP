@@ -2,7 +2,9 @@ using UnityEngine;
 
 public interface IEnemy
 {
-		bool isWithinRange(Vector3 targetPosition); //check if target is inside detection range
+		bool isWithinDetectionRange(Vector3 targetPosition); //check if target is inside detection range
+
+		bool isWithinAttackRange(Vector3 targetPosition); //check if target is inside detection range
 
     void Follow(Vector3 targetPosition); //move enemy to position
 

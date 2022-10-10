@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _statValues:
     DetectionRange: 6
+    AttackRange: 2

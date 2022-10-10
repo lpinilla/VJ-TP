@@ -9,14 +9,21 @@ public class EnemyController : MonoBehaviour, IEnemy
 
 
   public float DetectionRange => GetComponent<Enemy>().EnemyStats.DetectionRange;
+  public float AttackRange => GetComponent<Enemy>().EnemyStats.AttackRange;
 
 	void Awake(){
 		navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 	}
 
-	public bool isWithinRange(Vector3 targetPosition){
+	public bool isWithinDetectionRange(Vector3 targetPosition){
 		return Vector3.Distance(targetPosition, this.transform.position) <= DetectionRange;
 	}
+
+	public bool isWithinAttackRange(Vector3 targetPosition){
+		//Debug.Log(Vector3.Distance(targetPosition, this.transform.position));
+		return Vector3.Distance(targetPosition, this.transform.position) <= AttackRange;
+	}
+
 
   public void Follow(Vector3 targetPosition){
 			navMeshAgent.destination = targetPosition;
