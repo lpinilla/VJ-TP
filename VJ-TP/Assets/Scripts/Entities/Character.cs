@@ -6,9 +6,11 @@ public class Character : Actor
 {
     // Instances
     private MovementController _movementController;
+		private Animator _animatorController;
     private InteractableController _interactableController;
     [SerializeField] private List<BaseGun> _guns;
     private BaseGun _currentGun;
+
 
 		// Camera bindings
 		[SerializeField] private string xAxis = "Mouse X";
@@ -25,6 +27,7 @@ public class Character : Actor
 
     // Combat Bindings
     [SerializeField] private KeyCode _attack = KeyCode.Mouse0;
+    [SerializeField] private KeyCode _scope = KeyCode.Mouse1;
     [SerializeField] private KeyCode _reload = KeyCode.R;
 
     [SerializeField] private KeyCode _weaponSlot1 = KeyCode.Alpha1;
@@ -53,12 +56,13 @@ public class Character : Actor
     private void Start()
     {
         _movementController = GetComponent<MovementController>();
+				_animatorController = GetComponent<Animator>();
         ChangeWeapon(0);
         _cmdMoveForward = new CmdMovement(_movementController, Vector3.forward);
         _cmdMoveBack	= new CmdMovement(_movementController, Vector3.back);
         _cmdMoveLeft	= new CmdMovement(_movementController, Vector3.left);
         _cmdMoveRight = new CmdMovement(_movementController, Vector3.right);
-        _cmdRotation = new CmdRotation(_movementController, new Vector3(0, -90f, 0));
+        _cmdRotation = new CmdRotation(_movementController, Vector3.zero);
         _cmdJump = new CmdJump(_movementController);
 				_cmdAttack = new CmdAttack(_guns[0]);
 				//_cmdInteract = object the player is looking at
@@ -69,7 +73,7 @@ public class Character : Actor
 				//Calculate player's rotation
 				rotationY += Input.GetAxis(xAxis);
 				rotationX -= Input.GetAxis(yAxis);
-				_cmdRotation = new CmdRotation(_movementController, new Vector3(0, rotationY, -rotationX));
+				_cmdRotation = new CmdRotation(_movementController, new Vector3(0, rotationY, 0));
 				EventQueueManager.instance.AddMovementCommand(_cmdRotation);
 
 
@@ -84,8 +88,14 @@ public class Character : Actor
 				if (Input.GetKey(_interact))		EventQueueManager.instance.AddCommand(_cmdInteract);
 
 				//Add combat commands to queue
-        if (Input.GetKeyDown(_reload)) _currentGun?.Reload();
+        if (Input.GetKeyDown(_reload)){
+					//play animation
+					ChangeAnimation("Reload");
+					//reload gun bullets
+					_currentGun?.Reload();
+				}
         if (Input.GetKeyDown(_attack)) EventQueueManager.instance.AddCommand(_cmdAttack);
+        if (Input.GetKeyDown(_scope)) EventsManager.instance.ScopeToggle();
         if (Input.GetKeyDown(_weaponSlot1)) ChangeWeapon(0);
         if (Input.GetKeyDown(_weaponSlot2)) ChangeWeapon(1);
         if (Input.GetKeyDown(_weaponSlot3)) ChangeWeapon(2);
@@ -107,5 +117,10 @@ public class Character : Actor
         _cmdAttack = new CmdAttack(_currentGun);
         EventsManager.instance.WeaponChange(index);
     }
+
+		private void ChangeAnimation(string targetAnimation){
+			_animatorController.Play(targetAnimation);
+		}
+
 
 }
