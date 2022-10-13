@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour {
 		}else{
 			_virCam.Follow = characterHeadTransform;
 			_virCam.m_Lens.FieldOfView = 60;
-			aim.m_VerticalAxis = new AxisState(-70, 50, false, true, 300, 0.1f, 0.1f, "Mouse Y", true);
+			aim.m_VerticalAxis = new AxisState(-50, 12, false, true, 300, 0.1f, 0.1f, "Mouse Y", true);
 		}
 		isScoped = !isScoped;
 	}

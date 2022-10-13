@@ -16,11 +16,13 @@ public class MovementController : MonoBehaviour, IMoveable {
 		public float Gravity => globalStats.Gravity;
 
 		[SerializeField] private Transform targetCamTransform;
+		[SerializeField] private Transform gunTransform;
 
 		[SerializeField] private LayerMask targetLayer;
 		[SerializeField] private float playerHeightOffset = 1f;
 		[SerializeField] private float raycastMaxDistance = 0.6f;
 
+		[SerializeField] private float positionOffset = 5f;
 
 		private Rigidbody rigidbody;
 		private RaycastHit hit;
@@ -44,9 +46,9 @@ public class MovementController : MonoBehaviour, IMoveable {
 			}
 		}
 
-    public void Rotate(Vector3 direction){
-			//transform.localEulerAngles = direction * CameraSensitivity;
-			transform.rotation = Quaternion.Euler(0f, targetCamTransform.rotation.eulerAngles.y, 0f);
+    public void Rotate(Vector3 direction){ //TODO review unused param
+			transform.rotation = targetCamTransform.rotation;
+			gunTransform.rotation = targetCamTransform.rotation;
 		}
 
 		public void Jump() => rigidbody.AddForce(Vector3.up * Gravity * JumpHeight);

@@ -34,6 +34,9 @@ public class Character : Actor
     [SerializeField] private KeyCode _weaponSlot2 = KeyCode.Alpha2;
     [SerializeField] private KeyCode _weaponSlot3 = KeyCode.Alpha3;
 
+		//Pause
+    [SerializeField] private KeyCode _pause = KeyCode.P;
+
     [SerializeField] private KeyCode _setVictory = KeyCode.Return;
     [SerializeField] private KeyCode _setDefeat = KeyCode.Backspace;
 
@@ -66,9 +69,12 @@ public class Character : Actor
         _cmdJump = new CmdJump(_movementController);
 				_cmdAttack = new CmdAttack(_guns[0]);
 				//_cmdInteract = object the player is looking at
+				Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update() {
+
+				if(Input.GetKey(_pause)) Debug.Break();
 
 				//Calculate player's rotation
 				rotationY += Input.GetAxis(xAxis);
