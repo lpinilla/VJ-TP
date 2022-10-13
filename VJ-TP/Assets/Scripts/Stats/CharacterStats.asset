@@ -17,5 +17,5 @@ MonoBehaviour:
     MovementSpeed: 15
     RotationSpeed: 100
     JumpHeight: 10
-    RayCastHeightOffset: -1
+    RayCastHeightOffset: -0.5
     CameraSensitivity: 10

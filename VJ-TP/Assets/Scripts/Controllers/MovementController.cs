@@ -51,7 +51,10 @@ public class MovementController : MonoBehaviour, IMoveable {
 			gunTransform.rotation = targetCamTransform.rotation;
 		}
 
-		public void Jump() => rigidbody.AddForce(Vector3.up * Gravity * JumpHeight);
+		public void Jump(){
+			Debug.Log("should jump");
+			rigidbody.AddForce(Vector3.up * Gravity * JumpHeight);
+		}
 
 		public bool isFlying(){
 			//calculate the origin from where the raycast will be thrown
@@ -73,15 +76,14 @@ public class MovementController : MonoBehaviour, IMoveable {
 		}
 
 		void FixedUpdate(){
-			bool asd = isFlying();
-			if (asd){
-				Debug.Log(asd);
-				Fall();
-			}
+			bool flyingDebug = isFlying();
+			Debug.Log(flyingDebug);
+			if (flyingDebug) Fall();
 				//Fall();
 		}
 
 		private void Fall(){
+			Debug.Log("should fall");
 			rigidbody.AddForce(Vector3.down * Gravity * airTimer); //the longer you are in the air, the faster you fall
 		}
 
