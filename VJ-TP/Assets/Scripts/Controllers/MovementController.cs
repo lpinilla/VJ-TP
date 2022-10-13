@@ -52,7 +52,6 @@ public class MovementController : MonoBehaviour, IMoveable {
 		}
 
 		public void Jump(){
-			Debug.Log("should jump");
 			rigidbody.AddForce(Vector3.up * Gravity * JumpHeight);
 		}
 
@@ -76,14 +75,10 @@ public class MovementController : MonoBehaviour, IMoveable {
 		}
 
 		void FixedUpdate(){
-			bool flyingDebug = isFlying();
-			Debug.Log(flyingDebug);
-			if (flyingDebug) Fall();
-				//Fall();
+			if (isFlying()) Fall();
 		}
 
 		private void Fall(){
-			Debug.Log("should fall");
 			rigidbody.AddForce(Vector3.down * Gravity * airTimer); //the longer you are in the air, the faster you fall
 		}
 

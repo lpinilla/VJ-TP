@@ -59,7 +59,7 @@ public class Character : Actor
     private void Start()
     {
         _movementController = GetComponent<MovementController>();
-				_animatorController = GetComponent<Animator>();
+				_animatorController = GetComponentInChildren(typeof(Animator)) as Animator;
         ChangeWeapon(0);
         _cmdMoveForward = new CmdMovement(_movementController, Vector3.forward);
         _cmdMoveBack	= new CmdMovement(_movementController, Vector3.back);
@@ -84,10 +84,22 @@ public class Character : Actor
 
 
 				//Add movement commands to queue
-        if (Input.GetKey(_moveForward)) EventQueueManager.instance.AddMovementCommand(_cmdMoveForward);
-        if (Input.GetKey(_moveBack))    EventQueueManager.instance.AddMovementCommand(_cmdMoveBack);
-        if (Input.GetKey(_moveLeft))    EventQueueManager.instance.AddMovementCommand(_cmdMoveLeft);
-        if (Input.GetKey(_moveRight))   EventQueueManager.instance.AddMovementCommand(_cmdMoveRight);
+        if (Input.GetKey(_moveForward)){
+					EventQueueManager.instance.AddMovementCommand(_cmdMoveForward);
+					ChangeAnimation("Rifle Walk");
+				}
+        if (Input.GetKey(_moveBack)){
+					EventQueueManager.instance.AddMovementCommand(_cmdMoveBack);
+					ChangeAnimation("Rifle Walk");
+				}
+        if (Input.GetKey(_moveLeft)){
+					EventQueueManager.instance.AddMovementCommand(_cmdMoveLeft);
+					ChangeAnimation("Rifle Walk");
+				}
+        if (Input.GetKey(_moveRight)){
+					EventQueueManager.instance.AddMovementCommand(_cmdMoveRight);
+					ChangeAnimation("Rifle Walk");
+				}
         if (!_movementController.isFlying() && Input.GetKey(_jump)) EventQueueManager.instance.AddMovementCommand(_cmdJump);
 
 				//Add interact command to queue

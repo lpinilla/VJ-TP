@@ -9,8 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2e454cfbf1b46b8a69c5fd92ada62f, type: 3}
-  m_Name: GlobalStats
+  m_Script: {fileID: 11500000, guid: d74bae63693134358b00e52c632ce151, type: 3}
+  m_Name: ModelCharacter
   m_EditorClassIdentifier: 
   _statValues:
-    Gravity: 15
+    MaxLife: 100
+    MovementSpeed: 15
+    RotationSpeed: 100
+    JumpHeight: 10
+    RayCastHeightOffset: -0.5
+    CameraSensitivity: 10
