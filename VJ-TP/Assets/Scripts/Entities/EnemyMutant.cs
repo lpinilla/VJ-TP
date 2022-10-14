@@ -64,7 +64,8 @@ public class EnemyMutant : Enemy
 		}
 
 		public void AfterDeath(){
-			Destroy(this.gameObject);
+			EventsManager.instance.EventGameOver(true);
+			//Destroy(this.gameObject);
 		}
 
 		private void ChangeAnimation(string targetAnimation){
