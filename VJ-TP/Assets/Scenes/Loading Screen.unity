@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 67d132e1de97d4a6ba5ffdad8c17ca38, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a41d0bcc38aafba79a0e83a4d8ce2af2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -310,10 +310,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 609568930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a0362d9f154b078c7b244c8ca3fb44, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d3b23b6e8b5a56ab8a9a58ee8f6428f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetScene: Level1
 --- !u!222 &609568934
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -382,8 +381,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: I.T.B.A.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e72de786be2bb4917bdfce883d5d51da, type: 2}
-  m_sharedMaterial: {fileID: -8354940813931068664, guid: e72de786be2bb4917bdfce883d5d51da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7896db7f00d9b8526a5bdb45e60812d1, type: 2}
+  m_sharedMaterial: {fileID: 2829067262832099123, guid: 7896db7f00d9b8526a5bdb45e60812d1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -21,8 +21,6 @@ public class MovementController : MonoBehaviour, IMoveable {
 		[SerializeField] private float playerHeightOffset = 1f;
 		[SerializeField] private float raycastMaxDistance = 0.6f;
 
-		[SerializeField] private float positionOffset = 5f;
-
 		private Rigidbody rigidbody;
 		private RaycastHit hit;
 		private Vector3 raycastOrigin;

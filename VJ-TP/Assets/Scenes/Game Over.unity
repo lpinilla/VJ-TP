@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -20, y: 481}
   m_SizeDelta: {x: 1192.9011, y: 234.2896}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &104200754
@@ -183,8 +183,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GAME OVER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1a4d2e38ced924adbbbcef2e703bef8f, type: 2}
-  m_sharedMaterial: {fileID: 2829067262832099123, guid: 1a4d2e38ced924adbbbcef2e703bef8f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7896db7f00d9b8526a5bdb45e60812d1, type: 2}
+  m_sharedMaterial: {fileID: 2829067262832099123, guid: 7896db7f00d9b8526a5bdb45e60812d1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 267051968}
+      - m_Target: {fileID: 267051970}
         m_TargetAssemblyTypeName: UI_ButtonsLogic, Assembly-CSharp
         m_MethodName: CloseGame
         m_Mode: 1
@@ -377,8 +377,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 015520dc938aa473d954ba5b84f79bda, type: 2}
-  m_sharedMaterial: {fileID: -2868072306313603512, guid: 015520dc938aa473d954ba5b84f79bda, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7896db7f00d9b8526a5bdb45e60812d1, type: 2}
+  m_sharedMaterial: {fileID: 2829067262832099123, guid: 7896db7f00d9b8526a5bdb45e60812d1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f58b093f611174cfeb5d9f7ec018f534, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 94c4240a7b017d2b6bf91b9bc3f9c987, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -621,7 +621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 267051969}
-  - component: {fileID: 267051968}
+  - component: {fileID: 267051970}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -629,18 +629,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &267051968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267051967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0fda4e3fe9b4911bc8e5d74e68836a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &267051969
 Transform:
   m_ObjectHideFlags: 0
@@ -656,6 +644,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &267051970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267051967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d3b23b6e8b5a56ab8a9a58ee8f6428f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &293621735
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,8 +761,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Do you wish to continue?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 015520dc938aa473d954ba5b84f79bda, type: 2}
-  m_sharedMaterial: {fileID: -2868072306313603512, guid: 015520dc938aa473d954ba5b84f79bda, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7896db7f00d9b8526a5bdb45e60812d1, type: 2}
+  m_sharedMaterial: {fileID: 2829067262832099123, guid: 7896db7f00d9b8526a5bdb45e60812d1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 267051968}
+      - m_Target: {fileID: 267051970}
         m_TargetAssemblyTypeName: UI_ButtonsLogic, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 1
@@ -1222,8 +1222,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 015520dc938aa473d954ba5b84f79bda, type: 2}
-  m_sharedMaterial: {fileID: -2868072306313603512, guid: 015520dc938aa473d954ba5b84f79bda, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7896db7f00d9b8526a5bdb45e60812d1, type: 2}
+  m_sharedMaterial: {fileID: 2829067262832099123, guid: 7896db7f00d9b8526a5bdb45e60812d1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
