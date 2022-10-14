@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Character : Actor
 {
-    // Instances
+    // Controllers
     private MovementController _movementController;
 		private Animator _animatorController;
     private InteractableController _interactableController;
+		private LifeController _lifeController;
+
+
     [SerializeField] private List<BaseGun> _guns;
     private BaseGun _currentGun;
 
@@ -60,6 +63,7 @@ public class Character : Actor
     {
         _movementController = GetComponent<MovementController>();
 				_animatorController = GetComponentInChildren(typeof(Animator)) as Animator;
+				_lifeController = GetComponent<LifeController>();
         ChangeWeapon(0);
         _cmdMoveForward = new CmdMovement(_movementController, Vector3.forward);
         _cmdMoveBack	= new CmdMovement(_movementController, Vector3.back);
@@ -120,10 +124,10 @@ public class Character : Actor
 
 				//TODO: REMOVE THIS KEYBINDS, ONLY FOR TESTING
         if (Input.GetKeyDown(_setVictory)) EventsManager.instance.EventGameOver(true);
-        if (Input.GetKeyDown(_setDefeat)) GetComponent<IDamageable>().TakeDamage(20);
+        if (Input.GetKeyDown(_setDefeat)) _lifeController.TakeDamage(_lifeController.MaxLife);
 
 				//failsafe, kill player if it drops below -50 on Y position
-				if(transform.position.y < -50) GetComponent<IDamageable>().TakeDamage(20);
+				if(transform.position.y < -50) _lifeController.TakeDamage(_lifeController.MaxLife);
 
     }
 
@@ -138,6 +142,14 @@ public class Character : Actor
 
 		private void ChangeAnimation(string targetAnimation){
 			_animatorController.Play(targetAnimation);
+		}
+
+		void OnTriggerEnter(Collider other){
+				if(other.tag == "EnemyDamage"){
+					_lifeController.TakeDamage(40);
+				}else if(other.tag == "IntroAnimation"){
+					//Animations.play;
+				}
 		}
 
 

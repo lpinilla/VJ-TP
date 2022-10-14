@@ -28,14 +28,14 @@ public class EventsManager : MonoBehaviour
     #endregion
 
     //#region UI_EVENTS
-    public event Action<int, int> OnAmmoChange;
+    //public event Action<int, int> OnAmmoChange;
     public event Action<int> OnWeaponChange;
     public event Action<float, float> OnCharacterLifeChange;
     public event Action<int> OnAvatarChange;
 
-    public void AmmoChange(int currentAmmo, int maxAmmo) {
-        if (OnAmmoChange != null) OnAmmoChange(currentAmmo, maxAmmo);
-    }
+    //public void AmmoChange(int currentAmmo, int maxAmmo) {
+    //    if (OnAmmoChange != null) OnAmmoChange(currentAmmo, maxAmmo);
+    //}
 
     public void CharacterLifeChange(float currentLife, float maxLife) {
         if (OnCharacterLifeChange != null) OnCharacterLifeChange(currentLife, maxLife);

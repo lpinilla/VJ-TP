@@ -13,32 +13,41 @@ public class BaseGun : MonoBehaviour, IBaseGun
     [SerializeField] protected int _bulletCount;
 
 		public float Cooldown => _stats.Cooldown;
-		public GameObject TESTBullet;
+		[SerializeField] private GameObject bulletPrefab;
+
+		private Transform bulletInstanceTransform;
+
+		private Renderer gunRenderer;
 
     private void Start() {
-        Reload();
+			bulletInstanceTransform = transform.Find("BulletFireTransform");
+			gunRenderer = GetComponent<Renderer>();
+      Reload();
     }
 
     public virtual void Attack() {
         if (_bulletCount > 0) {
-					//put a bullet into scene
             var bullet = Instantiate(
-                TESTBullet,
-                transform.position,
-                transform.rotation);
-            bullet.name = "Bullet";
+							bulletPrefab, bulletInstanceTransform.position, bulletInstanceTransform.rotation
+						);
+						bullet.name = "Bullet";
             bullet.GetComponent<Bullet>().SetOwner(this);
             _bulletCount--;
-            //UI_AmmoUpdater();
+            UI_AmmoUpdater();
         }
     }
 
     public void Reload() {
         _bulletCount = MagSize;
-        //UI_AmmoUpdater();
+        UI_AmmoUpdater();
     }
 
-//    public void UI_AmmoUpdater() {
-//        EventsManager.instance.AmmoChange(_bulletCount, _stats.MagSize);
-//    }
+		public void UI_AmmoUpdater() {
+				//change Gun Color Intensity
+				//discretize bullet count with 0-255
+				float per = (float)_bulletCount / MagSize;
+				//change emission color based on bullet count
+				gunRenderer.material.SetColor("_EmissionColor", new Color(per, 0, 0, 0));
+		}
+
 }

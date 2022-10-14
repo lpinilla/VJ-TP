@@ -10,9 +10,10 @@ public class EnemyMutant : Enemy
 		private bool _taunted;
 		private bool _wasInRange;
 
-		[SerializeField] private Transform playerTransform;
+		private Transform playerTransform;
 
 		void Start() {
+			playerTransform = GameObject.FindWithTag("Character").transform;
 			_enemyController = GetComponent<EnemyController>();
 			_enemyAnimator = GetComponent<Animator>();
 			_taunted = false;
