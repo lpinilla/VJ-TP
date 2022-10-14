@@ -15,6 +15,7 @@ public class BaseGun : MonoBehaviour, IBaseGun
 		public float Cooldown => _stats.Cooldown;
 
 		public GameObject bulletPrefab => _stats.BulletPrefab;
+		public GameObject muzzleFlashPrefab => _stats.MuzzleFlashPrefab;
 
 		private Transform bulletInstanceTransform;
 
@@ -30,9 +31,10 @@ public class BaseGun : MonoBehaviour, IBaseGun
 
     public virtual void Attack() {
         if (_bulletCount > 0) {
-            var bullet = Instantiate(
-							bulletPrefab, bulletInstanceTransform.position, bulletInstanceTransform.rotation
-						);
+					//create muzzle flash
+					Instantiate(muzzleFlashPrefab, bulletInstanceTransform.position, bulletInstanceTransform.rotation);
+					//create bullet
+            var bullet = Instantiate(bulletPrefab, bulletInstanceTransform.position, bulletInstanceTransform.rotation);
 						bullet.name = "Bullet";
             bullet.GetComponent<Bullet>().SetOwner(this);
             _bulletCount--;

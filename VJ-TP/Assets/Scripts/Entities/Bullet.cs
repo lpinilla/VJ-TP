@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour, IBullet
     [SerializeField] private float _lifeTime = 5; //default bullet lifetime
 
     public float Speed => _speed;
-    [SerializeField] private const float _speed = 10; //default bullet speed
+    [SerializeField] private const float _speed = 15; //default bullet speed
 
     public BaseGun Owner => _owner;
     [SerializeField] private BaseGun _owner;

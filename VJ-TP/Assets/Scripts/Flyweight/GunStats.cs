@@ -6,6 +6,7 @@ public class GunStats : ScriptableObject
     [SerializeField] private GunStatValues _gunStatsValues;
 
     public GameObject BulletPrefab => _gunStatsValues.BulletPrefab;
+    public GameObject MuzzleFlashPrefab => _gunStatsValues.MuzzleFlashPrefab;
     public int Damage => _gunStatsValues.Damage;
     public int MagSize => _gunStatsValues.MagSize;
     public float Cooldown => _gunStatsValues.Cooldown;
@@ -17,6 +18,7 @@ public class GunStats : ScriptableObject
 public struct GunStatValues
 {
     public GameObject BulletPrefab;
+    public GameObject MuzzleFlashPrefab;
     public int Damage;
     public int MagSize;
     public float Cooldown;

@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gunStatsValues:
     BulletPrefab: {fileID: 3798473631949273126, guid: 5e4b6802a5751b0c48c724fefb4f6c60, type: 3}
+    MuzzleFlashPrefab: {fileID: 1210736966147162303, guid: 084f3be386c392a17b1d55bf6799c194, type: 3}
     Damage: 30
     MagSize: 10
     Cooldown: 1
     BulletDrop: 0.1
+    BulletSpeed: 0
