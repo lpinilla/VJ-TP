@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MutantStats
   m_EditorClassIdentifier: 
   _statValues:
-    DetectionRange: 6
+    DetectionRange: 13
     AttackRange: 2

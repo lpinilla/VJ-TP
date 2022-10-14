@@ -129,4 +129,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lifeTime: 5
   _owner: {fileID: 0}
-  _layerTarget: 
+  _layerTargets: 09000000

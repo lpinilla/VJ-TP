@@ -20,19 +20,18 @@ public class Bullet : MonoBehaviour, IBullet
     public Collider Collider => _collider;
     private Collider _collider;
 
-    [SerializeField] private List<int> _layerTarget;
+    [SerializeField] private List<int> _layerTargets;
 
 		//bullet parabolic motion
     public void Travel() => transform.Translate(new Vector3(0, -_owner.BulletDrop, _speed) * Time.deltaTime);
 
 		//Bullet hit collider
     public void OnTriggerEnter(Collider collider) {
-			//TODO if layer is floor then stick or destroy
-        if (_layerTarget.Contains(collider.gameObject.layer)) {
-            IDamageable damageable = collider.GetComponent<IDamageable>();
-            damageable?.TakeDamage(_owner.Damage);
-            Destroy(this.gameObject);
+        if (_layerTargets.Contains(collider.gameObject.layer)) {
+          IDamageable damageable = collider.GetComponent<IDamageable>();
+          damageable?.TakeDamage(_owner.Damage);
         }
+      Destroy(this.gameObject); //always destroy if it hits something
     }
 
     private void Start() {

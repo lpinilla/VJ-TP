@@ -13,7 +13,8 @@ public class BaseGun : MonoBehaviour, IBaseGun
     [SerializeField] protected int _bulletCount;
 
 		public float Cooldown => _stats.Cooldown;
-		[SerializeField] private GameObject bulletPrefab;
+
+		public GameObject bulletPrefab => _stats.BulletPrefab;
 
 		private Transform bulletInstanceTransform;
 
@@ -44,10 +45,10 @@ public class BaseGun : MonoBehaviour, IBaseGun
 
 		public void UI_AmmoUpdater() {
 				//change Gun Color Intensity
-				//discretize bullet count with 0-255
-				float per = (float)_bulletCount / MagSize;
+				//get percentage
+				float bulletCountPercentage = (float)_bulletCount / MagSize;
 				//change emission color based on bullet count
-				gunRenderer.material.SetColor("_EmissionColor", new Color(per, 0, 0, 0));
+				gunRenderer.material.SetColor("_EmissionColor", new Color(bulletCountPercentage, 0, 0, 0));
 		}
 
 }

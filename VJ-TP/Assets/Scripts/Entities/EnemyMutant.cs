@@ -55,10 +55,12 @@ public class EnemyMutant : Enemy
 			_enemyController.Follow(playerTransform.position); //force follow after taunt animation
 		}
 
+		public void AfterDeath(){
+			Destroy(this.gameObject);
+		}
+
 		private void ChangeAnimation(string targetAnimation){
 			_enemyAnimator.Play(targetAnimation);
 		}
-
-
 
 }

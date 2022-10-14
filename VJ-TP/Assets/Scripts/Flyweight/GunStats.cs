@@ -10,6 +10,7 @@ public class GunStats : ScriptableObject
     public int MagSize => _gunStatsValues.MagSize;
     public float Cooldown => _gunStatsValues.Cooldown;
     public float BulletDrop => _gunStatsValues.BulletDrop;
+		public float BulletSpeed => _gunStatsValues.BulletSpeed;
 }
 
 [System.Serializable]
@@ -20,4 +21,5 @@ public struct GunStatValues
     public int MagSize;
     public float Cooldown;
     public float BulletDrop;
+		public float BulletSpeed;
 }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RifleStats
   m_EditorClassIdentifier: 
   _gunStatsValues:
-    BulletPrefab: {fileID: 0}
-    Damage: 10
+    BulletPrefab: {fileID: 3798473631949273126, guid: 5e4b6802a5751b0c48c724fefb4f6c60, type: 3}
+    Damage: 30
     MagSize: 10
     Cooldown: 1
     BulletDrop: 0.1

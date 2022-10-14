@@ -21,7 +21,14 @@ public class LifeController : MonoBehaviour, IDamageable
         if (_currentLife <= 0) Die();
     }
 
-    public void Die() => Destroy(this.gameObject);
+    public void Die(){
+			if(tag == "Enemy"){
+				GetComponent<Animator>().Play("Die");
+				//Die will be called via event once the animation completes
+			}else{
+				Destroy(this.gameObject);
+			}
+		}
 
     private void OnDestroy()
     {
