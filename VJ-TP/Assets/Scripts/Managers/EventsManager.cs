@@ -13,10 +13,10 @@ public class EventsManager : MonoBehaviour
 
 		//Player Interaction Events
 		//public delegate void ClickAction();
-		public event Action onToggleScope;
+		public event Action OnToggleScope;
 
 		public void ScopeToggle(){
-			if (onToggleScope != null) onToggleScope();
+			if (OnToggleScope != null) OnToggleScope();
 		}
 
     public event Action<bool> OnGameOver;
@@ -35,6 +35,17 @@ public class EventsManager : MonoBehaviour
     public void WeaponChange(int weaponId) {
         if (OnWeaponChange != null) OnWeaponChange(weaponId);
     }
+
+		public event Action StartIntroCutscene;
+		public event Action FinishIntroCutscene;
+
+		public void IntroCutscene(){
+			if(StartIntroCutscene != null) StartIntroCutscene();
+		}
+
+		public void StopIntroCutscene(){
+			if(FinishIntroCutscene != null) FinishIntroCutscene();
+		}
 
 
 }

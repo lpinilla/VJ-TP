@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour {
 	void Start(){
 			_virCam = GetComponent<CinemachineVirtualCamera>();
 			isScoped = false;
-			EventsManager.instance.onToggleScope += ToggleScope;
+			EventsManager.instance.OnToggleScope += ToggleScope;
 			aim = _virCam.GetCinemachineComponent<CinemachinePOV>();
 			characterTransform = GameObject.FindWithTag("Character").transform;
 			characterHeadTransform = characterTransform.Find("Head");

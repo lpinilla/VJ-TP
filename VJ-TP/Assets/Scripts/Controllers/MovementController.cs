@@ -30,28 +30,38 @@ public class MovementController : MonoBehaviour, IMoveable {
 
 		private float airTimer;
 
+		private bool _areControllersFrozen;
+
 		void Start(){
 			rigidbody = GetComponent<Rigidbody>();
 			airTimer = 0f;
+			EventsManager.instance.StartIntroCutscene += FreezeControllers;
+			EventsManager.instance.FinishIntroCutscene += UnfreezeControllers;
 		}
 
     public void Travel(Vector3 direction){
-			Vector3 newDir = targetCamTransform.TransformDirection(direction * Time.deltaTime * Speed);
-			newDir.y = 0f;
-			//shoot raycast in the direction we are looking at, if we found something, ignore movement
-			Debug.DrawRay(transform.position + new Vector3(0,playerHeightOffset,0), newDir * 10f, Color.red);
-			if(!Physics.Raycast(transform.position, newDir, out hit, raycastMaxDistance)){
-				transform.Translate(newDir, Space.World);
+			if(!_areControllersFrozen){
+				Vector3 newDir = targetCamTransform.TransformDirection(direction * Time.deltaTime * Speed);
+				newDir.y = 0f;
+				//shoot raycast in the direction we are looking at, if we found something, ignore movement
+				Debug.DrawRay(transform.position + new Vector3(0,playerHeightOffset,0), newDir * 10f, Color.red);
+				if(!Physics.Raycast(transform.position, newDir, out hit, raycastMaxDistance, targetLayer)){
+					transform.Translate(newDir, Space.World);
+				}
 			}
 		}
 
     public void Rotate(Vector3 direction){ //TODO review unused param
-			transform.rotation = targetCamTransform.rotation;
-			gunTransform.rotation = targetCamTransform.rotation;
+			if(!_areControllersFrozen){
+				transform.rotation = targetCamTransform.rotation;
+				gunTransform.rotation = targetCamTransform.rotation;
+			}
 		}
 
 		public void Jump(){
-			rigidbody.AddForce(Vector3.up * Gravity * JumpHeight);
+			if(!_areControllersFrozen){
+				rigidbody.AddForce(Vector3.up * Gravity * JumpHeight);
+			}
 		}
 
 		public bool isFlying(){
@@ -78,7 +88,17 @@ public class MovementController : MonoBehaviour, IMoveable {
 		}
 
 		private void Fall(){
-			rigidbody.AddForce(Vector3.down * Gravity * airTimer); //the longer you are in the air, the faster you fall
+			if(!_areControllersFrozen){
+				rigidbody.AddForce(Vector3.down * Gravity * airTimer); //the longer you are in the air, the faster you fall
+			}
+		}
+
+		void FreezeControllers(){
+				_areControllersFrozen = true;
+		}
+
+		void UnfreezeControllers(){
+				_areControllersFrozen = false;
 		}
 
 }

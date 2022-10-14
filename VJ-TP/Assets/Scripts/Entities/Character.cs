@@ -153,8 +153,9 @@ public class Character : Actor
 					ICurable c = (other.GetComponentInParent(typeof(HealthPack)) as HealthPack);
 					_lifeController.Heal(c.HealAmmount);
 					Destroy(other.gameObject);
-				} else if(other.tag == "IntroAnimation"){
-					//Animations.play;
+				} else if(other.tag == "Cutscene"){
+					EventsManager.instance.IntroCutscene();
+					Destroy(other.gameObject);
 				}
 		}
 
