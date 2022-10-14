@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
         _isGameOver = true;
         _isVictory = isVictory;
         
-        Debug.Log("MURIOOOOOOOOOOOOOOo");
         
         GlobalData.instance.SetVictoryField(_isVictory);
 
