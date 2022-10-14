@@ -15,8 +15,6 @@ public class LifeController : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damage)
     {
-        Debug.Log("DAMAGEEE");
-        
         _currentLife -= damage;
         if (name == "Character")
             EventsManager.instance.CharacterLifeChange(_currentLife, MaxLife);
@@ -27,19 +25,21 @@ public class LifeController : MonoBehaviour, IDamageable
 			if(tag == "Enemy"){
 				GetComponent<Animator>().Play("Die");
 				//Die will be called via event once the animation completes
-			}
-            else
-            {
-                endGame();
-            }
-            //else{
+			} else {
+				endGame();
+      }
+      //else{
 			//	Destroy(this.gameObject);
 			//}
 		}
 
+    public void Heal(float healAmmount){
+			float newHealth = _currentLife + healAmmount;
+			_currentLife = (newHealth > MaxLife) ? MaxLife : newHealth;
+		}
+
     private void endGame()
     {
-        Debug.Log("IM DEAD");
         EventsManager.instance.EventGameOver(false);
     }
 }

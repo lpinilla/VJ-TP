@@ -25,7 +25,6 @@ public class EnemyMutant : Enemy
 		}
 
 		void Update(){
-			Debug.Log(IsAttacking);
 			if(_enemyController.isWithinAttackRange(playerTransform.position)){
 				_enemyController.StopFollowing();
 				_taunted = false;

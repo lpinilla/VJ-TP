@@ -6,5 +6,7 @@ public interface IDamageable
 
     void TakeDamage(float damage); //receive damage
 
+    void Heal(float healAmmount); //receive health
+
     void Die(); //terminate instance
 }

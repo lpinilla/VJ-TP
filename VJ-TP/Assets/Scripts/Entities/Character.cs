@@ -145,7 +145,11 @@ public class Character : Actor
 		void OnTriggerEnter(Collider other){
 				if(other.tag == "EnemyDamage"){
 					if((other.GetComponentInParent(typeof(EnemyMutant)) as EnemyMutant).IsAttacking) _lifeController.TakeDamage(40);
-				}else if(other.tag == "IntroAnimation"){
+				}else if(other.tag == "Health"){
+					ICurable c = (other.GetComponentInParent(typeof(HealthPack)) as HealthPack);
+					_lifeController.Heal(c.HealAmmount);
+					Destroy(other.gameObject);
+				} else if(other.tag == "IntroAnimation"){
 					//Animations.play;
 				}
 		}
