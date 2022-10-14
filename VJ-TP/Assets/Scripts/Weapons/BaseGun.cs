@@ -19,6 +19,8 @@ public class BaseGun : MonoBehaviour, IBaseGun
 		private Transform bulletInstanceTransform;
 
 		private Renderer gunRenderer;
+		
+		public AudioSource audioSource;
 
     private void Start() {
 			bulletInstanceTransform = transform.Find("BulletFireTransform");
@@ -35,6 +37,7 @@ public class BaseGun : MonoBehaviour, IBaseGun
             bullet.GetComponent<Bullet>().SetOwner(this);
             _bulletCount--;
             UI_AmmoUpdater();
+            audioSource.Play();
         }
     }
 

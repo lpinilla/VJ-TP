@@ -22,6 +22,7 @@ public class EventsManager : MonoBehaviour
     public event Action<bool> OnGameOver;
 
     public void EventGameOver(bool isVictory) {
+        Debug.Log("en EVENTO");
         if (OnGameOver != null) OnGameOver(isVictory);
     }
 
