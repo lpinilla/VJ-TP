@@ -9,7 +9,6 @@ public class MovementController : MonoBehaviour, IMoveable {
     public float RotationSpeed => GetComponent<Actor>().ActorStats.RotationSpeed;
     public float JumpHeight => GetComponent<Actor>().ActorStats.JumpHeight;
 		public float RayCastHeightOffset => GetComponent<Actor>().ActorStats.RayCastHeightOffset;
-		public float CameraSensitivity => GetComponent<Actor>().ActorStats.CameraSensitivity;
 
 		//global stats
 		[SerializeField] private GlobalStats globalStats;

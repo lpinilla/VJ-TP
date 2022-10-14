@@ -10,6 +10,8 @@ public class Character : Actor
     private InteractableController _interactableController;
 		private LifeController _lifeController;
 
+		private Renderer lifeBarRenderer;
+
 
     [SerializeField] private List<BaseGun> _guns;
     private BaseGun _currentGun;
@@ -62,6 +64,7 @@ public class Character : Actor
         _movementController = GetComponent<MovementController>();
 				_animatorController = GetComponentInChildren(typeof(Animator)) as Animator;
 				_lifeController = GetComponent<LifeController>();
+				lifeBarRenderer = transform.Find("Model/root/pelvis/spine_01/spine_02/spine_03/clavicle_l/upperarm_l/lowerarm_l/lowerarm_twist_01_l/HealthIndicator").GetComponent<MeshRenderer>();
         ChangeWeapon(0);
         _cmdMoveForward = new CmdMovement(_movementController, Vector3.forward);
         _cmdMoveBack	= new CmdMovement(_movementController, Vector3.back);
@@ -72,6 +75,7 @@ public class Character : Actor
 				_cmdAttack = new CmdAttack(_guns[0]);
 				//_cmdInteract = object the player is looking at
 				Cursor.lockState = CursorLockMode.Locked;
+				EventsManager.instance.OnCharacterLifeChange += ChangeHealthIndicator;
     }
 
     void Update() {
@@ -153,6 +157,13 @@ public class Character : Actor
 					//Animations.play;
 				}
 		}
+
+		public void ChangeHealthIndicator(float currHealth, float MaxHealth){
+			float healthPercentage = 1f - currHealth / MaxHealth;
+			Color currentColor = Color.Lerp(Color.green, Color.red, healthPercentage);
+			lifeBarRenderer.material.SetColor("_EmissionColor", currentColor);
+		}
+
 
 
 }

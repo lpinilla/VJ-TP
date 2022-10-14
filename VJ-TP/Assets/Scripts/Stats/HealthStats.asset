@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HealthStats
   m_EditorClassIdentifier: 
   _statValues:
-    HealAmmount: 20
+    HealAmmount: 40

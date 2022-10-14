@@ -4,6 +4,8 @@ using UnityEngine;
 public class LifeController : MonoBehaviour, IDamageable
 {
     public float MaxLife => GetComponent<Actor>().ActorStats.MaxLife;
+
+		public float CurrentLife => _currentLife;
     [SerializeField] private float _currentLife;
 
     private void Start()
@@ -36,6 +38,7 @@ public class LifeController : MonoBehaviour, IDamageable
     public void Heal(float healAmmount){
 			float newHealth = _currentLife + healAmmount;
 			_currentLife = (newHealth > MaxLife) ? MaxLife : newHealth;
+			EventsManager.instance.CharacterLifeChange(_currentLife, MaxLife);
 		}
 
     private void endGame()

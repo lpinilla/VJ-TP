@@ -18,16 +18,10 @@ public class GameManager : MonoBehaviour
     {
         _isGameOver = true;
         _isVictory = isVictory;
-        
-        
         GlobalData.instance.SetVictoryField(_isVictory);
-
-        if (isVictory)
-        {
+        if (isVictory) {
             Invoke("LoadVictoryScene", 3);
-        }
-        else
-        {
+        } else {
             Invoke("LoadEndgameScene", 3);
         }
     }

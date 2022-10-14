@@ -27,7 +27,6 @@ public class EventsManager : MonoBehaviour
 
     public event Action<int> OnWeaponChange;
     public event Action<float, float> OnCharacterLifeChange;
-    public event Action<int> OnAvatarChange;
 
     public void CharacterLifeChange(float currentLife, float maxLife) {
         if (OnCharacterLifeChange != null) OnCharacterLifeChange(currentLife, maxLife);
