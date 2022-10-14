@@ -43,8 +43,6 @@ public class Character : Actor
     [SerializeField] private KeyCode _setVictory = KeyCode.Return;
     [SerializeField] private KeyCode _setDefeat = KeyCode.Backspace;
 
-    //[SerializeField] private float _timer = 3;
-
     /* Commands */
     private CmdMovement _cmdMoveForward;
     private CmdMovement _cmdMoveBack;
@@ -146,7 +144,7 @@ public class Character : Actor
 
 		void OnTriggerEnter(Collider other){
 				if(other.tag == "EnemyDamage"){
-					_lifeController.TakeDamage(40);
+					if((other.GetComponentInParent(typeof(EnemyMutant)) as EnemyMutant).IsAttacking) _lifeController.TakeDamage(40);
 				}else if(other.tag == "IntroAnimation"){
 					//Animations.play;
 				}

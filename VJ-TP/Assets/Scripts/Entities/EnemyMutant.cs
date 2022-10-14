@@ -10,6 +10,9 @@ public class EnemyMutant : Enemy
 		private bool _taunted;
 		private bool _wasInRange;
 
+		public bool IsAttacking => _isAttacking;
+		private bool _isAttacking;
+
 		private Transform playerTransform;
 
 		void Start() {
@@ -22,10 +25,12 @@ public class EnemyMutant : Enemy
 		}
 
 		void Update(){
+			Debug.Log(IsAttacking);
 			if(_enemyController.isWithinAttackRange(playerTransform.position)){
+				_enemyController.StopFollowing();
 				_taunted = false;
 				//play attack animation
-				ChangeAnimation("Die"); //TODO test remove
+				ChangeAnimation("Attack");
 				//atack
 			}else if(_enemyController.isWithinDetectionRange(playerTransform.position)){
 					//play animation
@@ -48,6 +53,10 @@ public class EnemyMutant : Enemy
 				_taunted	= false;
 			}
 		}
+
+		public void StartAttack() => _isAttacking = true;
+
+		public void FinishAttack() => _isAttacking = false;
 
 		public void Taunt(){
 			_taunting = false;
