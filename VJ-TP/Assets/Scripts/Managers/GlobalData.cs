@@ -13,7 +13,7 @@ public class GlobalData : MonoBehaviour
     {
         if (instance != null) Destroy(this.gameObject);
         instance = this;
-
+        transform.parent = null;
         DontDestroyOnLoad(this);
     }
 

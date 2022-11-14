@@ -2262,7 +2262,6 @@ MonoBehaviour:
     m_Bits: 55
   playerHeightOffset: 1
   raycastMaxDistance: 0.6
-  positionOffset: 30
 --- !u!82 &1646170443287086209
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3682,7 +3681,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1e940d15337ad1e43b0cc1b2430d7c06, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8e5a5e93b5eba10c8a1c6f1c7165d284, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1

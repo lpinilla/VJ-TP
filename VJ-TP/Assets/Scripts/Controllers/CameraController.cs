@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour {
 			aim = _virCam.GetCinemachineComponent<CinemachinePOV>();
 			characterTransform = GameObject.FindWithTag("Character").transform;
 			characterHeadTransform = characterTransform.Find("Head");
-			gunScopeTransform = characterTransform.Find("SightTransform");
+			gunScopeTransform = characterTransform.Find("SciFiGunLightBlack/SightTransform");
 			_virCam.LookAt = characterTransform;
 			_virCam.Follow = characterHeadTransform;
 	}

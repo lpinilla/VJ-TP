@@ -6,26 +6,22 @@ using UnityEngine.UI;
 
 public class LoadScreenManager : MonoBehaviour
 {
-    [SerializeField] private string _targetScene = "Level1";
 
-    void Start()
+    void Update()
     {
         StartCoroutine(LoadAsync());
     }
 
     IEnumerator LoadAsync()
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(_targetScene);
+        AsyncOperation operation = SceneManager.LoadSceneAsync("Level1");
         operation.allowSceneActivation = false;
 
         while (!operation.isDone)
         {
 
-            if(operation.progress >= .9f)
-            {
-                operation.allowSceneActivation = true;
-            }
-
+            if(operation.progress >= .9f) operation.allowSceneActivation = true;
+            
             yield return null;
         }
     }
