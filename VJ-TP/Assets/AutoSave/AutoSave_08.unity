@@ -348,7 +348,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36918499}
-  m_LocalRotation: {x: -0.01886998, y: 0.20282969, z: 0.0039093946, w: 0.9790244}
+  m_LocalRotation: {x: -0.01886998, y: 0.2028297, z: 0.0039093946, w: 0.9790244}
   m_LocalPosition: {x: 30.46, y: 1.74, z: -3.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9900,7 +9900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac04256d92c714c3d89b09173505cc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 1706905289849784573}
+  _enemyPrefab: {fileID: 766704535726481520, guid: 500a68c733884840cb856aa43aa8fdb6, type: 3}
   _enemyInstances:
   - {fileID: 1706905289849784573}
   _spawnParentList:

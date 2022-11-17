@@ -64,8 +64,7 @@ public class EnemyMutant : Enemy
 		}
 
 		public void AfterDeath(){
-			EventsManager.instance.EventGameOver(true);
-			//Destroy(this.gameObject);
+			EventsManager.instance.monsterDeath(this);
 		}
 
 		private void ChangeAnimation(string targetAnimation){

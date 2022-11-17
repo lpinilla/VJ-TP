@@ -1,10 +1,18 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EventsManager : MonoBehaviour
 {
     static public EventsManager instance;
+    [SerializeField] private Enemy _enemyPrefab;
+    [SerializeField] private List<Enemy> _enemyInstances = new List<Enemy>();
+    [SerializeField] private List<Transform> _spawnParentList;
 
+    
+    private Spawner<Enemy> _enemyFactory = new Spawner<Enemy>();
+    public List<Enemy> EnemyInstances => _enemyInstances;
+    
     private void Awake()
     {
         if (instance != null) Destroy(this);
@@ -36,16 +44,37 @@ public class EventsManager : MonoBehaviour
         if (OnWeaponChange != null) OnWeaponChange(weaponId);
     }
 
-		public event Action StartIntroCutscene;
-		public event Action FinishIntroCutscene;
+	public event Action StartIntroCutscene;
+	public event Action FinishIntroCutscene;
 
-		public void IntroCutscene(){
-			if(StartIntroCutscene != null) StartIntroCutscene();
+	public void IntroCutscene(){
+		if(StartIntroCutscene != null) StartIntroCutscene();
+	}
+
+	public void StopIntroCutscene(){
+		if(FinishIntroCutscene != null) FinishIntroCutscene();
+	}
+
+	public void startRound()
+	{
+		foreach (var spawn in _spawnParentList)
+		{
+			for (int i = 0; i < 10; i++)
+			{
+				var enemy = _enemyFactory.Create(_enemyPrefab, spawn);
+				_enemyInstances.Add(enemy);
+			}
 		}
+	}
 
-		public void StopIntroCutscene(){
-			if(FinishIntroCutscene != null) FinishIntroCutscene();
+	public void monsterDeath(Enemy deadEnemy)
+	{
+		if (_enemyInstances.Count == 1)
+		{
+			startRound();
 		}
-
-
+		_enemyInstances.Remove(deadEnemy);
+		Destroy(deadEnemy.gameObject);
+		
+	}
 }

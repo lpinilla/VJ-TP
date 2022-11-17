@@ -9900,16 +9900,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac04256d92c714c3d89b09173505cc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 1706905289849784573}
-  _enemyInstances:
-  - {fileID: 1706905289849784573}
-  _spawnParentList:
-  - {fileID: 1192040430}
-  - {fileID: 1797170348}
-  - {fileID: 1468786609}
-  - {fileID: 976494674}
-  - {fileID: 1035088309}
-  - {fileID: 730345716}
+  _enemyPrefab: {fileID: 0}
+  _enemyInstances: []
+  _spawnParentList: []
 --- !u!1001 &1062786399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12963,7 +12956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192040429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.89, z: 7.71}
+  m_LocalPosition: {x: 0, y: 9.36, z: 7.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22260,17 +22253,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 4548214300761833188, guid: 500a68c733884840cb856aa43aa8fdb6, type: 3}
   m_PrefabInstance: {fileID: 1706905289849784568}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1706905289849784573 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 766704535726481520, guid: 500a68c733884840cb856aa43aa8fdb6, type: 3}
-  m_PrefabInstance: {fileID: 1706905289849784568}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592686453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e622d7a0a2957e286280b84bc1535a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5177330532116455752
 PrefabInstance:
   m_ObjectHideFlags: 0

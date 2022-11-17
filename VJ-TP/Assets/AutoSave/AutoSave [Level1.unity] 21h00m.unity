@@ -507,6 +507,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isGameOver: 0
   _isVictory: 0
+  _enemyPrefab: {fileID: 1706905289849784573}
+  _enemyInstances: []
+  _spawnParentList:
+  - {fileID: 1192040430}
+  - {fileID: 1797170348}
+  - {fileID: 1468786609}
+  - {fileID: 976494674}
+  - {fileID: 1035088309}
+  - {fileID: 730345716}
 --- !u!1001 &62570655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9900,16 +9909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac04256d92c714c3d89b09173505cc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 1706905289849784573}
-  _enemyInstances:
-  - {fileID: 1706905289849784573}
-  _spawnParentList:
-  - {fileID: 1192040430}
-  - {fileID: 1797170348}
-  - {fileID: 1468786609}
-  - {fileID: 976494674}
-  - {fileID: 1035088309}
-  - {fileID: 730345716}
 --- !u!1001 &1062786399
 PrefabInstance:
   m_ObjectHideFlags: 0
