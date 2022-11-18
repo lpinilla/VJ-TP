@@ -7,9 +7,11 @@ public class EventsManager : MonoBehaviour
     static public EventsManager instance;
     [SerializeField] private Enemy _enemyPrefab;
     [SerializeField] private List<Enemy> _enemyInstances = new List<Enemy>();
+    [SerializeField] private int[] _rounds;
+    [SerializeField] private int _currentRound;
     [SerializeField] private List<Transform> _spawnParentList;
-
-    
+    [SerializeField] private float _roundPointsValue;
+     
     private Spawner<Enemy> _enemyFactory = new Spawner<Enemy>();
     public List<Enemy> EnemyInstances => _enemyInstances;
     
@@ -55,11 +57,12 @@ public class EventsManager : MonoBehaviour
 		if(FinishIntroCutscene != null) FinishIntroCutscene();
 	}
 
-	public void startRound()
+	public void startRound(int roundSize)
 	{
+		GlobalData.instance.AddPoints(_roundPointsValue);
 		foreach (var spawn in _spawnParentList)
 		{
-			for (int i = 0; i < 10; i++)
+			for (int i = 0; i < roundSize/_spawnParentList.Count; i++)
 			{
 				var enemy = _enemyFactory.Create(_enemyPrefab, spawn);
 				_enemyInstances.Add(enemy);
@@ -71,8 +74,9 @@ public class EventsManager : MonoBehaviour
 	{
 		if (_enemyInstances.Count == 1)
 		{
-			startRound();
+			startRound(_rounds[_currentRound += 1 ]);
 		}
+		GlobalData.instance.AddPoints(deadEnemy.EnemyStats.PointsValue);
 		_enemyInstances.Remove(deadEnemy);
 		Destroy(deadEnemy.gameObject);
 		

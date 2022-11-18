@@ -64,6 +64,9 @@ public class EnemyMutant : Enemy
 		}
 
 		public void AfterDeath(){
+
+			Debug.Log("im DEADD");
+			
 			EventsManager.instance.monsterDeath(this);
 		}
 

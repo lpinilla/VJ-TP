@@ -17,10 +17,7 @@ public class LifeController : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damage)
     {
-
-	    Debug.Log("HIIIIIIIT");
-	    
-        _currentLife -= damage;
+	    _currentLife -= damage;
         if (name == "Character")
             EventsManager.instance.CharacterLifeChange(_currentLife, MaxLife);
         if (_currentLife <= 0) Die();

@@ -7,7 +7,9 @@ public class GlobalData : MonoBehaviour
     static public GlobalData instance;
 
     public bool IsVictory => _isVictory;
+    public float points => _points;
     [SerializeField] private bool _isVictory;
+    [SerializeField] private float _points;
 
     private void Awake()
     {
@@ -18,4 +20,6 @@ public class GlobalData : MonoBehaviour
     }
 
     public void SetVictoryField(bool isVictory) => _isVictory = isVictory;
+    public void AddPoints(float points) => _points = points + points;
+
 }

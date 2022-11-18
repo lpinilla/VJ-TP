@@ -7,6 +7,8 @@ public class EnemyStats : ScriptableObject
 
 		public float DetectionRange => _statValues.DetectionRange;
 		public float AttackRange		=> _statValues.AttackRange;
+		public float PointsValue		=> _statValues.PointsValue;
+
 }
 
 [System.Serializable]
@@ -14,4 +16,5 @@ public struct EnemyStatValues
 {
 		public float DetectionRange;
 		public float AttackRange;
+		public float PointsValue;
 }
