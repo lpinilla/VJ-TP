@@ -22,11 +22,10 @@ public class EnemyMutant : Enemy
 			_taunted = false;
 			_taunting = false;
 			_wasInRange = false;
-			_isDead = false;
 		}
 
 		void Update(){
-			if(!_enemyController.isDead()){
+			if(!_enemyController.isDead){
 				if(_enemyController.isWithinAttackRange(playerTransform.position)){
 					_enemyController.StopFollowing();
 					_taunted = false;
