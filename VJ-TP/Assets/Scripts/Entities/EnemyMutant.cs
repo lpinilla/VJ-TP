@@ -12,7 +12,6 @@ public class EnemyMutant : Enemy
 
 		public bool IsAttacking => _isAttacking;
 		private bool _isAttacking;
-		private bool _isDead;
 
 		private Transform playerTransform;
 
@@ -27,7 +26,7 @@ public class EnemyMutant : Enemy
 		}
 
 		void Update(){
-			if(!_isDead){
+			if(!_enemyController.isDead()){
 				if(_enemyController.isWithinAttackRange(playerTransform.position)){
 					_enemyController.StopFollowing();
 					_taunted = false;
@@ -68,8 +67,6 @@ public class EnemyMutant : Enemy
 		}
 
 		public void AfterDeath(){
-			_isDead = true;
-			Debug.Log("im DEADD");
 			EventsManager.instance.monsterDeath(this);
 		}
 

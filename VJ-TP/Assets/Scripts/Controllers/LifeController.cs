@@ -8,11 +8,16 @@ public class LifeController : MonoBehaviour, IDamageable
 		public float CurrentLife => _currentLife;
     [SerializeField] private float _currentLife;
 
+    private EnemyController _enemyController;
+
     private void Start()
     {
         _currentLife = MaxLife;
-        if(name == "Character")
+        if(name == "Character"){
             EventsManager.instance.CharacterLifeChange(_currentLife, MaxLife);
+        }else{
+          _enemyController = GetComponent<EnemyController>();
+        }
     }
 
     public void TakeDamage(float damage)
@@ -26,6 +31,7 @@ public class LifeController : MonoBehaviour, IDamageable
     public void Die(){
 			if(tag == "Enemy"){
 				GetComponent<Animator>().Play("Die");
+        _enemyController.StartDying();
 				//Die will be called via event once the animation completes
 			} else {
 				endGame();

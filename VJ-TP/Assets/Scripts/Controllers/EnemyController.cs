@@ -12,7 +12,11 @@ public class EnemyController : MonoBehaviour, IEnemy
   public float AttackRange => GetComponent<Enemy>().EnemyStats.AttackRange;
   public float Speed => GetComponent<Actor>().ActorStats.MovementSpeed;
 
+  public bool isDead => _isDead;
+  private bool _isDead;
+
 	void Awake(){
+		_isDead = false;
 		navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 	}
 
@@ -38,6 +42,10 @@ public class EnemyController : MonoBehaviour, IEnemy
 
   public void Attack(){
 
+	}
+
+	public void StartDying(){
+		_isDead = true;
 	}
 
 
