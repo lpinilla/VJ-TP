@@ -150,9 +150,11 @@ public class Character : Actor
 				if(other.tag == "EnemyDamage"){
 					if((other.GetComponentInParent(typeof(EnemyMutant)) as EnemyMutant).IsAttacking) _lifeController.TakeDamage(40);
 				}else if(other.tag == "Health"){
-					ICurable c = (other.GetComponentInParent(typeof(HealthPack)) as HealthPack);
-					_lifeController.Heal(c.HealAmmount);
-					Destroy(other.gameObject);
+					if(_lifeController.CurrentLife != _lifeController.MaxLife){
+						ICurable c = (other.GetComponentInParent(typeof(HealthPack)) as HealthPack);
+						_lifeController.Heal(c.HealAmmount);
+						Destroy(other.gameObject);
+					}
 				} else if(other.tag == "Cutscene"){
 					EventsManager.instance.IntroCutscene();
 					Destroy(other.gameObject);
