@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour, IEnemy
 
   public float DetectionRange => GetComponent<Enemy>().EnemyStats.DetectionRange;
   public float AttackRange => GetComponent<Enemy>().EnemyStats.AttackRange;
+  public float Speed => GetComponent<Actor>().ActorStats.MovementSpeed;
 
 	void Awake(){
 		navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -27,10 +28,12 @@ public class EnemyController : MonoBehaviour, IEnemy
 
   public void Follow(Vector3 targetPosition){
 			navMeshAgent.destination = targetPosition;
+			navMeshAgent.speed = Speed;
 	}
 
 	public void StopFollowing(){
 			navMeshAgent.destination = transform.position; //set destination to my own position to stop path finding
+			navMeshAgent.speed = 0f;
 	}
 
   public void Attack(){

@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour {
 			characterHeadTransform = characterTransform.Find("Head");
 			gunScopeTransform = characterTransform.Find("SciFiGunLightBlack/SightTransform");
 			_virCam.LookAt = characterTransform;
-			_virCam.Follow = characterHeadTransform;
+			// _virCam.Follow = characterHeadTransform;
 	}
 
 	void ToggleScope(){

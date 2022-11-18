@@ -60,6 +60,7 @@ public class EventsManager : MonoBehaviour
 	public void startRound(int roundSize)
 	{
 		GlobalData.instance.AddPoints(_roundPointsValue);
+		
 		foreach (var spawn in _spawnParentList)
 		{
 			for (int i = 0; i < roundSize/_spawnParentList.Count; i++)
@@ -72,13 +73,19 @@ public class EventsManager : MonoBehaviour
 
 	public void monsterDeath(Enemy deadEnemy)
 	{
+		GlobalData.instance.AddPoints(deadEnemy.EnemyStats.PointsValue);
+		Debug.Log(GlobalData.instance.GetPoints());
 		if (_enemyInstances.Count == 1)
 		{
-			startRound(_rounds[_currentRound += 1 ]);
+			if (_currentRound == _rounds.Length - 1)
+			{
+				GlobalData.instance.AddPoints(_roundPointsValue);
+				EventGameOver(true);
+			}
+			else
+				startRound(_rounds[_currentRound += 1 ]);
 		}
-		GlobalData.instance.AddPoints(deadEnemy.EnemyStats.PointsValue);
 		_enemyInstances.Remove(deadEnemy);
 		Destroy(deadEnemy.gameObject);
-		
 	}
 }

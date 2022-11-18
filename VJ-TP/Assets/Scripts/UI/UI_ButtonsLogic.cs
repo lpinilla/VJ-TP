@@ -14,6 +14,8 @@ using UnityEngine.SceneManagement;
         public void LoadEndgameScene() => SceneManager.LoadScene("Game Over");
         public void LoadInfoScene() => Debug.Log("Information scene in development!!!");
         public void LoadSettingsScene() => Debug.Log("Settings scene in development!!!");
+        
+        public void LoadRankingScene() => SceneManager.LoadScene("Ranking");
         public void CloseGame() => Application.Quit();
 
         private void Start()

@@ -12,6 +12,7 @@ public class EnemyMutant : Enemy
 
 		public bool IsAttacking => _isAttacking;
 		private bool _isAttacking;
+		private bool _isDead;
 
 		private Transform playerTransform;
 
@@ -22,34 +23,37 @@ public class EnemyMutant : Enemy
 			_taunted = false;
 			_taunting = false;
 			_wasInRange = false;
+			_isDead = false;
 		}
 
 		void Update(){
-			if(_enemyController.isWithinAttackRange(playerTransform.position)){
-				_enemyController.StopFollowing();
-				_taunted = false;
-				//play attack animation
-				ChangeAnimation("Attack");
-				//atack
-			}else if(_enemyController.isWithinDetectionRange(playerTransform.position)){
-					//play animation
-					if(!_taunted){
-						if(!_taunting){
-							_taunting = true;
-							ChangeAnimation("Taunt");
+			if(!_isDead){
+				if(_enemyController.isWithinAttackRange(playerTransform.position)){
+					_enemyController.StopFollowing();
+					_taunted = false;
+					//play attack animation
+					ChangeAnimation("Attack");
+					//atack
+				}else if(_enemyController.isWithinDetectionRange(playerTransform.position)){
+						//play animation
+						if(!_taunted){
+							if(!_taunting){
+								_taunting = true;
+								ChangeAnimation("Taunt");
+							}
+						}else{
+							_enemyController.Follow(playerTransform.position);
 						}
-					}else{
-						_enemyController.Follow(playerTransform.position);
+						_wasInRange = true;
+				}else{
+					_enemyController.StopFollowing();
+					if (_wasInRange){
+						ChangeAnimation("Stop Running");
+						_wasInRange = false; //has no new target
 					}
-					_wasInRange = true;
-			}else{
-				_enemyController.StopFollowing();
-				if (_wasInRange){
-					ChangeAnimation("Stop Running");
-					_wasInRange = false; //has no new target
+					_taunting = false;
+					_taunted	= false;
 				}
-				_taunting = false;
-				_taunted	= false;
 			}
 		}
 
@@ -64,9 +68,8 @@ public class EnemyMutant : Enemy
 		}
 
 		public void AfterDeath(){
-
+			_isDead = true;
 			Debug.Log("im DEADD");
-			
 			EventsManager.instance.monsterDeath(this);
 		}
 

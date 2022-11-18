@@ -7,6 +7,9 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
+    guid: 08c49dee1d68148eea5968a6a08119ca
+  - enabled: 1
+    path: Assets/Scenes/Ranking.unity
     guid: ae300d23e5915c25aa4841869f94363f
   - enabled: 1
     path: Assets/Scenes/Loading Screen.unity

@@ -29,10 +29,6 @@ public class Bullet : MonoBehaviour, IBullet
     public void OnTriggerEnter(Collider collider) {
         if (_layerTargets.Contains(collider.gameObject.layer)) {
           IDamageable damageable = collider.GetComponent<IDamageable>();
-
-          Debug.Log("YO LE PEGUEEEEE");
-          Debug.Log(collider.name);
-
           damageable?.TakeDamage(_owner.Damage);
         }
       Destroy(this.gameObject); //always destroy if it hits something
