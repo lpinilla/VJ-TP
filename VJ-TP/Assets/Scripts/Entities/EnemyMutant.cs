@@ -22,6 +22,10 @@ public class EnemyMutant : Enemy
 			_taunted = false;
 			_taunting = false;
 			_wasInRange = false;
+			Rigidbody[] bodyparts = GetComponentsInChildren<Rigidbody>();
+            foreach(Rigidbody part in bodyparts){
+            	part.isKinematic = true;
+            }
 		}
 
 		void Update(){
@@ -63,10 +67,6 @@ public class EnemyMutant : Enemy
 			_taunting = false;
 			_taunted = true;
 			_enemyController.Follow(playerTransform.position); //force follow after taunt animation
-		}
-
-		public void AfterDeath(){
-			EventsManager.instance.monsterDeath(this);
 		}
 
 		private void ChangeAnimation(string targetAnimation){

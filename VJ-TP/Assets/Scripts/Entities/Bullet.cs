@@ -20,6 +20,9 @@ public class Bullet : MonoBehaviour, IBullet
     public Collider Collider => _collider;
     private Collider _collider;
 
+    [SerializeField] private float bulletPushForce = 1000f; //this could be generic or depend on the weapon
+    [SerializeField] private float bulletPushRadius = 3;
+
     [SerializeField] private List<int> _layerTargets;
 
 		//bullet parabolic motion
@@ -28,8 +31,22 @@ public class Bullet : MonoBehaviour, IBullet
 		//Bullet hit collider
     public void OnTriggerEnter(Collider collider) {
         if (_layerTargets.Contains(collider.gameObject.layer)) {
-          IDamageable damageable = collider.GetComponent<IDamageable>();
-          damageable?.TakeDamage(_owner.Damage);
+            if(collider.TryGetComponent<IDamageable>(out IDamageable damageable)){
+                damageable.TakeDamage(_owner.Damage);
+                if(collider.GetComponent<LifeController>().CurrentLife <= 0){
+                    //calculate collision with new colliders spawned by the enemy dying
+                    Collider[] bodyparts = Physics.OverlapSphere(transform.position, 1f);
+                    foreach(Collider col in bodyparts){
+                        if(col.gameObject.layer == 9){
+                            if(col.TryGetComponent<Rigidbody>(out Rigidbody rb)){
+                                rb.AddExplosionForce(bulletPushForce, transform.position,bulletPushRadius, 0f);
+                            }
+                        }
+                    }
+                }
+            }else if(collider.TryGetComponent<IExplodable>(out IExplodable explodable)){
+                explodable.Explode();
+            }
         }
       Destroy(this.gameObject); //always destroy if it hits something
     }

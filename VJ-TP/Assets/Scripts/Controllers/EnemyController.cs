@@ -15,9 +15,18 @@ public class EnemyController : MonoBehaviour, IEnemy
   public bool isDead => _isDead;
   private bool _isDead;
 
+  private Rigidbody[] rigidbodies;
+  private Collider[] colliders;
+
 	void Awake(){
 		_isDead = false;
 		navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+	}
+
+	void Start(){
+		setRigidbodyState(true);
+        setColliderState(false);
+        GetComponent<Animator>().enabled = true;
 	}
 
 	public bool isWithinDetectionRange(Vector3 targetPosition){
@@ -45,10 +54,31 @@ public class EnemyController : MonoBehaviour, IEnemy
 	}
 
 	public void StartDying(){
+		Destroy(gameObject, 3f);
+		GetComponent<Animator>().enabled = false;
+        setRigidbodyState(false);
+        setColliderState(true);
 		_isDead = true;
+		EventsManager.instance.EnemyDeath();
 	}
 
+	void setRigidbodyState(bool state){
+        rigidbodies = GetComponentsInChildren<Rigidbody>();
+        foreach (Rigidbody rigidbody in rigidbodies){
+            rigidbody.isKinematic = state;
+        }
+        gameObject.GetComponent<Rigidbody>().isKinematic = !state;
+
+    }
 
 
+    void setColliderState(bool state){
+        colliders = GetComponentsInChildren<Collider>();
+        foreach (Collider collider in colliders){
+            collider.enabled = state;
+        }
+        gameObject.GetComponent<Collider>().enabled = !state;
+
+    }
 
 }

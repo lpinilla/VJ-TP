@@ -6,14 +6,12 @@ public class EventsManager : MonoBehaviour
 {
     static public EventsManager instance;
     [SerializeField] private Enemy _enemyPrefab;
-    [SerializeField] private List<Enemy> _enemyInstances = new List<Enemy>();
+    
     [SerializeField] private int[] _rounds;
     [SerializeField] private int _currentRound;
     [SerializeField] private List<Transform> _spawnParentList;
     [SerializeField] private float _roundPointsValue;
      
-    private Spawner<Enemy> _enemyFactory = new Spawner<Enemy>();
-    public List<Enemy> EnemyInstances => _enemyInstances;
     
     private void Awake()
     {
@@ -53,39 +51,19 @@ public class EventsManager : MonoBehaviour
 		if(StartIntroCutscene != null) StartIntroCutscene();
 	}
 
+	public event Action StartHordesEvent;
+
+	//finish cutscene and start hordes
 	public void StopIntroCutscene(){
-		if(FinishIntroCutscene != null) FinishIntroCutscene();
-	}
-
-	public void startRound(int roundSize)
-	{
-		GlobalData.instance.AddPoints(_roundPointsValue);
-		
-		foreach (var spawn in _spawnParentList)
-		{
-			for (int i = 0; i < roundSize/_spawnParentList.Count; i++)
-			{
-				var enemy = _enemyFactory.Create(_enemyPrefab, spawn);
-				_enemyInstances.Add(enemy);
-			}
+		if(FinishIntroCutscene != null){
+			FinishIntroCutscene();
+			StartHordesEvent();
 		}
 	}
 
-	public void monsterDeath(Enemy deadEnemy)
-	{
-		GlobalData.instance.AddPoints(deadEnemy.EnemyStats.PointsValue);
-		Debug.Log(GlobalData.instance.GetPoints());
-		if (_enemyInstances.Count == 1)
-		{
-			if (_currentRound == _rounds.Length - 1)
-			{
-				GlobalData.instance.AddPoints(_roundPointsValue);
-				EventGameOver(true);
-			}
-			else
-				startRound(_rounds[_currentRound += 1 ]);
-		}
-		_enemyInstances.Remove(deadEnemy);
-		Destroy(deadEnemy.gameObject);
+	public event Action EnemyDeathEvent;
+
+	public void EnemyDeath(){
+		if(EnemyDeathEvent != null) EnemyDeathEvent();
 	}
 }

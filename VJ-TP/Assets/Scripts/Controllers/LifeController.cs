@@ -5,7 +5,7 @@ public class LifeController : MonoBehaviour, IDamageable
 {
     public float MaxLife => GetComponent<Actor>().ActorStats.MaxLife;
 
-		public float CurrentLife => _currentLife;
+	public float CurrentLife => _currentLife;
     [SerializeField] private float _currentLife;
 
     private EnemyController _enemyController;
@@ -30,8 +30,7 @@ public class LifeController : MonoBehaviour, IDamageable
 
     public void Die(){
 			if(tag == "Enemy"){
-				GetComponent<Animator>().Play("Die");
-        _enemyController.StartDying();
+                _enemyController.StartDying();
 				//Die will be called via event once the animation completes
 			} else {
 				endGame();
@@ -39,7 +38,11 @@ public class LifeController : MonoBehaviour, IDamageable
       //else{
 			//	Destroy(this.gameObject);
 			//}
-		}
+	}
+
+    public bool IsDead(){
+        return _currentLife <= 0;
+    }
 
     public void Heal(float healAmmount){
 			float newHealth = _currentLife + healAmmount;

@@ -10,12 +10,12 @@ public class RankingManager : MonoBehaviour
     private List<RankingModel> _elements = new List<RankingModel>();
     private List<string> _dummyNames;
 
-    //private Database _db;
+    // private Database _db;
 
     private void Start()
     {
         /* Database constructor */
-        //_db = new Database();
+        // _db = new Database();
 
         /* init de la lista */
         _dummyNames = new List<string> { 
@@ -27,6 +27,7 @@ public class RankingManager : MonoBehaviour
                 _dummyNames[Random.Range(0, _dummyNames.Count)],
                 Random.Range(0, 50000)
             ));
+            
         }
        // _elements = _db.GetAllRecords();
 
