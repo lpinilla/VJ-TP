@@ -60,7 +60,7 @@ public class Character : Actor
 
 	private float rotationY;
 	private float rotationX;
-
+	private bool _areControllersFrozen;
 
     private void Start()
     {
@@ -80,6 +80,8 @@ public class Character : Actor
 		Cursor.lockState = CursorLockMode.Locked;
 		EventsManager.instance.OnCharacterLifeChange += ChangeHealthIndicator;
 		_hasKey = false;
+		EventsManager.instance.StartIntroCutscene += FreezeControllers;
+		EventsManager.instance.FinishIntroCutscene += UnfreezeControllers;
     }
 
     void Update() {
@@ -94,37 +96,36 @@ public class Character : Actor
 
 
 		//Add movement commands to queue
-        if (Input.GetKey(_moveForward)){
+        if (Input.GetKey(_moveForward) && !_areControllersFrozen){
 			EventQueueManager.instance.AddMovementCommand(_cmdMoveForward);
 			ChangeAnimation("Rifle Walk");
 		}
-        if (Input.GetKey(_moveBack)){
+        if (Input.GetKey(_moveBack) && !_areControllersFrozen){
 			EventQueueManager.instance.AddMovementCommand(_cmdMoveBack);
 			ChangeAnimation("Rifle Walk");
 		}
-        if (Input.GetKey(_moveLeft)){
+        if (Input.GetKey(_moveLeft) && !_areControllersFrozen){
 			EventQueueManager.instance.AddMovementCommand(_cmdMoveLeft);
 			ChangeAnimation("Rifle Walk");
 		}
-        if (Input.GetKey(_moveRight)){
+        if (Input.GetKey(_moveRight) && !_areControllersFrozen){
 			EventQueueManager.instance.AddMovementCommand(_cmdMoveRight);
 			ChangeAnimation("Rifle Walk");
 		}
-        if (!_movementController.isFlying() && Input.GetKey(_jump)) EventQueueManager.instance.AddMovementCommand(_cmdJump);
+        if (!_movementController.isFlying() && Input.GetKey(_jump) && !_areControllersFrozen) EventQueueManager.instance.AddMovementCommand(_cmdJump);
 			//Add interact command to queue
-			if (Input.GetKey(_interact))	EventQueueManager.instance.AddCommand(_cmdInteract);
-			//Add combat commands to queue
-        if (Input.GetKeyDown(_reload)){
+			//if (Input.GetKey(_interact))	EventQueueManager.instance.AddCommand(_cmdInteract);
+        if (Input.GetKeyDown(_reload) && !_areControllersFrozen){
 			//play animation
 			ChangeAnimation("Reload");
 			//reload gun bullets
 			_currentGun?.Reload();
 		}
-        if (Input.GetKeyDown(_attack)) EventQueueManager.instance.AddCommand(_cmdAttack);
-        if (Input.GetKeyDown(_scope)) EventsManager.instance.ScopeToggle();
-        if (Input.GetKeyDown(_weaponSlot1)) ChangeWeapon(0);
-        if (Input.GetKeyDown(_weaponSlot2)) ChangeWeapon(1);
-        if (Input.GetKeyDown(_weaponSlot3)) ChangeWeapon(2);
+        if (Input.GetKeyDown(_attack) && !_areControllersFrozen) EventQueueManager.instance.AddCommand(_cmdAttack);
+        if (Input.GetKeyDown(_scope) && !_areControllersFrozen) EventsManager.instance.ScopeToggle();
+        if (Input.GetKeyDown(_weaponSlot1) && !_areControllersFrozen) ChangeWeapon(0);
+        //if (Input.GetKeyDown(_weaponSlot2) && !_areControllersFrozen) ChangeWeapon(1);
+        //if (Input.GetKeyDown(_weaponSlot3) && !_areControllersFrozen) ChangeWeapon(2);
 
 		//TODO: REMOVE THIS KEYBINDS, ONLY FOR TESTING
         //if (Input.GetKeyDown(_setVictory)) EventsManager.instance.EventGameOver(true);
@@ -177,6 +178,12 @@ public class Character : Actor
 			lifeBarRenderer.material.SetColor("_EmissionColor", currentColor);
 		}
 
+		void FreezeControllers(){
+			_areControllersFrozen = true;
+		}
 
+		void UnfreezeControllers(){
+			_areControllersFrozen = false;
+		}
 
 }

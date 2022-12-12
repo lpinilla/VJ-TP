@@ -25,41 +25,30 @@ public class MovementController : MonoBehaviour, IMoveable {
 		private RaycastHit hit;
 		private Vector3 raycastOrigin;
 		private Vector3 targetPosition;
-
 		private float airTimer;
-
-		private bool _areControllersFrozen;
 
 		void Start(){
 			rigidbody = GetComponent<Rigidbody>();
 			airTimer = 0f;
-			EventsManager.instance.StartIntroCutscene += FreezeControllers;
-			EventsManager.instance.FinishIntroCutscene += UnfreezeControllers;
 		}
 
     public void Travel(Vector3 direction){
-			if(!_areControllersFrozen){
-				Vector3 newDir = targetCamTransform.TransformDirection(direction * Time.deltaTime * Speed);
-				newDir.y = 0f;
-				//shoot raycast in the direction we are looking at, if we found something, ignore movement
-				Debug.DrawRay(transform.position + new Vector3(0,playerHeightOffset,0), newDir * 10f, Color.red);
-				if(!Physics.Raycast(transform.position, newDir, out hit, raycastMaxDistance, targetLayer)){
-					transform.Translate(newDir, Space.World);
-				}
+			Vector3 newDir = targetCamTransform.TransformDirection(direction * Time.deltaTime * Speed);
+			newDir.y = 0f;
+			//shoot raycast in the direction we are looking at, if we found something, ignore movement
+			Debug.DrawRay(transform.position + new Vector3(0,playerHeightOffset,0), newDir * 10f, Color.red);
+			if(!Physics.Raycast(transform.position, newDir, out hit, raycastMaxDistance, targetLayer)){
+				transform.Translate(newDir, Space.World);
 			}
 		}
 
     public void Rotate(Vector3 direction){ //TODO review unused param
-			if(!_areControllersFrozen){
-				transform.rotation = targetCamTransform.rotation;
-				gunTransform.rotation = targetCamTransform.rotation;
-			}
+			transform.rotation = targetCamTransform.rotation;
+			gunTransform.rotation = targetCamTransform.rotation;
 		}
 
 		public void Jump(){
-			if(!_areControllersFrozen){
-				rigidbody.AddForce(Vector3.up * Gravity * JumpHeight);
-			}
+			rigidbody.AddForce(Vector3.up * Gravity * JumpHeight);
 		}
 
 		public bool isFlying(){
@@ -86,17 +75,7 @@ public class MovementController : MonoBehaviour, IMoveable {
 		}
 
 		private void Fall(){
-			if(!_areControllersFrozen){
-				rigidbody.AddForce(Vector3.down * Gravity * airTimer); //the longer you are in the air, the faster you fall
-			}
-		}
-
-		void FreezeControllers(){
-				_areControllersFrozen = true;
-		}
-
-		void UnfreezeControllers(){
-				_areControllersFrozen = false;
+			rigidbody.AddForce(Vector3.down * Gravity * airTimer); //the longer you are in the air, the faster you fall
 		}
 
 }

@@ -12,6 +12,7 @@ public class EnemyMutant : Enemy
 
 		public bool IsAttacking => _isAttacking;
 		private bool _isAttacking;
+		private bool _wasShot;
 
 		private Transform playerTransform;
 
@@ -22,8 +23,8 @@ public class EnemyMutant : Enemy
 			_taunted = false;
 			_taunting = false;
 			_wasInRange = false;
-			Rigidbody[] bodyparts = GetComponentsInChildren<Rigidbody>();
-            foreach(Rigidbody part in bodyparts){
+			_wasShot = false;
+            foreach(Rigidbody part in GetComponentsInChildren<Rigidbody>()){
             	part.isKinematic = true;
             }
 		}
@@ -36,7 +37,7 @@ public class EnemyMutant : Enemy
 					//play attack animation
 					ChangeAnimation("Attack");
 					//atack
-				}else if(_enemyController.isWithinDetectionRange(playerTransform.position)){
+				}else if(_enemyController.isWithinDetectionRange(playerTransform.position) || _wasShot){
 						//play animation
 						if(!_taunted){
 							if(!_taunting){
@@ -47,15 +48,9 @@ public class EnemyMutant : Enemy
 							_enemyController.Follow(playerTransform.position);
 						}
 						_wasInRange = true;
-				}else{
-					_enemyController.StopFollowing();
-					if (_wasInRange){
-						ChangeAnimation("Stop Running");
-						_wasInRange = false; //has no new target
-					}
-					_taunting = false;
-					_taunted	= false;
 				}
+			}else{
+					_enemyController.StopFollowing();
 			}
 		}
 
@@ -63,10 +58,16 @@ public class EnemyMutant : Enemy
 
 		public void FinishAttack() => _isAttacking = false;
 
+		public void TauntByBullet(){
+			_wasShot = true;
+		}
+
 		public void Taunt(){
-			_taunting = false;
-			_taunted = true;
-			_enemyController.Follow(playerTransform.position); //force follow after taunt animation
+			if(!_enemyController.isDead){
+				_taunting = false;
+				_taunted = true;
+				_enemyController.Follow(playerTransform.position); //force follow after taunt animation
+			}
 		}
 
 		private void ChangeAnimation(string targetAnimation){

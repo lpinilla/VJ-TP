@@ -30,8 +30,8 @@ public class ExplodableBarrel : MonoBehaviour, IExplodable
         foreach(Collider hit in _colliders){
             if(hit.TryGetComponent<Enemy>(out Enemy enemy)){
                 //apply damage
-                //the damage will be the same for every r in the radius. We could do it depend on r in the future
-                hit.GetComponent<LifeController>().TakeDamage(Damage);
+                //the damage varies inversely proportional with the distance to the center
+                hit.GetComponent<LifeController>().TakeDamage(Damage * (1 - Vector3.Distance(explosionPosition, enemy.GetComponent<Transform>().position) / Radius) );
             }
         }
         //damage might have killed an enemy and enabled its ragdoll, we need to recalculate

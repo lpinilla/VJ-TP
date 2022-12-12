@@ -32,7 +32,13 @@ public class Bullet : MonoBehaviour, IBullet
     public void OnTriggerEnter(Collider collider) {
         if (_layerTargets.Contains(collider.gameObject.layer)) {
             if(collider.TryGetComponent<IDamageable>(out IDamageable damageable)){
+                //apply damage
                 damageable.TakeDamage(_owner.Damage);
+                //if enemy was not taunted, it should now be
+                EnemyMutant mutant = collider.GetComponentInParent(typeof(EnemyMutant)) as EnemyMutant;
+                if(mutant != null){
+                    mutant.Taunt();
+                }
                 if(collider.GetComponent<LifeController>().CurrentLife <= 0){
                     //calculate collision with new colliders spawned by the enemy dying
                     Collider[] bodyparts = Physics.OverlapSphere(transform.position, 1f);
