@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Character : Actor
 {
-    // Controllers
+	public Animator TunnelEntrance;
+	// Controllers
     private MovementController _movementController;
 	private Animator _animatorController;
     private InteractableController _interactableController;
@@ -57,7 +59,6 @@ public class Character : Actor
 	private CmdRotation _cmdRotation;
     private CmdJump _cmdJump;
     private CmdAttack _cmdAttack;
-
     private CmdInteract _cmdInteract;
 
 	private float rotationY;
@@ -67,7 +68,7 @@ public class Character : Actor
 	private float shotCounter = 0;
 	private bool _isFiring = false;
 
-    private void Start()
+	private void Start()
     {
         _movementController = GetComponent<MovementController>();
 		_animatorController = GetComponentInChildren(typeof(Animator)) as Animator;
@@ -87,11 +88,12 @@ public class Character : Actor
 		_hasKey = false;
 		EventsManager.instance.StartIntroCutscene += FreezeControllers;
 		EventsManager.instance.FinishIntroCutscene += UnfreezeControllers;
+		EventsManager.instance.Level1FinaleEvent += LoadTunnel;
     }
 
     void Update() {
 
-		if(Input.GetKey(_pause)) Debug.Break();
+				if(Input.GetKey(_pause)) Debug.Break();
 
 		//Calculate player's rotation
 		rotationY += Input.GetAxis(xAxis);
@@ -132,13 +134,12 @@ public class Character : Actor
         //if (Input.GetKeyDown(_weaponSlot2) && !_areControllersFrozen) ChangeWeapon(1);
         //if (Input.GetKeyDown(_weaponSlot3) && !_areControllersFrozen) ChangeWeapon(2);
 
-		//TODO: REMOVE THIS KEYBINDS, ONLY FOR TESTING
+        //TODO: REMOVE THIS KEYBINDS, ONLY FOR TESTING
         //if (Input.GetKeyDown(_setVictory)) EventsManager.instance.EventGameOver(true);
         //if (Input.GetKeyDown(_setDefeat)) _lifeController.TakeDamage(_lifeController.MaxLife);
 
-		//failsafe, kill player if it drops below -50 on Y position
-		if(transform.position.y < -50) _lifeController.TakeDamage(_lifeController.MaxLife);
-
+        //failsafe, kill player if it drops below -50 on Y position
+        if(transform.position.y < -50) _lifeController.TakeDamage(_lifeController.MaxLife);
 
     }
 
@@ -178,11 +179,16 @@ public class Character : Actor
 				Destroy(other.gameObject);
 			} else if(other.tag == "NextLevel"){
 				if(_hasKey){
-					Debug.Log("Should open door and load next level here");
-					//load next level
-					SceneManager.LoadScene(6, LoadSceneMode.Additive);
+					EventsManager.instance.EndLevel1();
+					Destroy(other.gameObject);
 				}
-			}
+			} else if(other.tag == "TunnelEntrance"){
+				TunnelEntrance.SetBool("isOpen",false);
+				Destroy(other.gameObject);
+			} else if(other.tag == "TunnelExit"){
+				EventsManager.instance.StartLevel2();
+				Destroy(other.gameObject);
+		}
 		}
 
 		public void ChangeHealthIndicator(float currHealth, float MaxHealth){
@@ -199,5 +205,26 @@ public class Character : Actor
 			_areControllersFrozen = false;
 		}
 
+		void LoadTunnel()
+		{
+			StartCoroutine(LoadAsync("Tunnel"));
+			TunnelEntrance.SetBool("isOpen",true);
+		}
+
+		
+		
+		IEnumerator LoadAsync(String name)
+		{
+			AsyncOperation operation = SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
+			operation.allowSceneActivation = false;
+
+			while (!operation.isDone)
+			{
+
+				if(operation.progress >= .9f) operation.allowSceneActivation = true;
+            
+				yield return null;
+			}
+		}
 
 }

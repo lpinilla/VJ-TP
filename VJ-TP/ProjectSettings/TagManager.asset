@@ -9,6 +9,11 @@ TagManager:
   - EnemyDamage
   - Health
   - Cutscene
+  - FxTemporaire
+  - Key
+  - NextLevel
+  - TunnelEntrance
+  - TunnelExit
   layers:
   - Default
   - TransparentFX
@@ -20,7 +25,7 @@ TagManager:
   - Character
   - PostProcessing
   - Enemy
-  - 
+  - Explodable
   - 
   - 
   - 

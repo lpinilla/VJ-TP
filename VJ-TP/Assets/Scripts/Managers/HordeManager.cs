@@ -39,6 +39,8 @@ public class HordeManager : MonoBehaviour {
 	}
 
 	void StartHordes(){
+		Debug.Log("Start Round");
+		Debug.Log(_hordeStats.EnemiesInFirstRound);
 		_inHorde = true;
 		_enemyFactory.CreateN(_hordeStats.EnemyPrefab, possibleSpawnPoints, _hordeStats.EnemiesInFirstRound);
 		_aliveEnemyCount = _hordeStats.EnemiesInFirstRound;

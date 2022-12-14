@@ -66,4 +66,18 @@ public class EventsManager : MonoBehaviour
 	public void EnemyDeath(){
 		if(EnemyDeathEvent != null) EnemyDeathEvent();
 	}
+
+	public event Action Level1FinaleEvent;
+	
+	public void EndLevel1()
+	{
+		Level1FinaleEvent();
+	}
+	
+	public event Action Level2Event;
+	
+	public void StartLevel2()
+	{
+		Level2Event();
+	}
 }
