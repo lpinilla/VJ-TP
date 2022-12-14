@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Character : Actor
 {
@@ -56,11 +57,15 @@ public class Character : Actor
 	private CmdRotation _cmdRotation;
     private CmdJump _cmdJump;
     private CmdAttack _cmdAttack;
+
     private CmdInteract _cmdInteract;
 
 	private float rotationY;
 	private float rotationX;
 	private bool _areControllersFrozen;
+
+	private float shotCounter = 0;
+	private bool _isFiring = false;
 
     private void Start()
     {
@@ -121,7 +126,7 @@ public class Character : Actor
 			//reload gun bullets
 			_currentGun?.Reload();
 		}
-        if (Input.GetKeyDown(_attack) && !_areControllersFrozen) EventQueueManager.instance.AddCommand(_cmdAttack);
+        if (Input.GetKey(_attack) && !_areControllersFrozen) EventQueueManager.instance.AddCommand(_cmdAttack);
         if (Input.GetKeyDown(_scope) && !_areControllersFrozen) EventsManager.instance.ScopeToggle();
         if (Input.GetKeyDown(_weaponSlot1) && !_areControllersFrozen) ChangeWeapon(0);
         //if (Input.GetKeyDown(_weaponSlot2) && !_areControllersFrozen) ChangeWeapon(1);
@@ -133,6 +138,7 @@ public class Character : Actor
 
 		//failsafe, kill player if it drops below -50 on Y position
 		if(transform.position.y < -50) _lifeController.TakeDamage(_lifeController.MaxLife);
+
 
     }
 
@@ -151,7 +157,13 @@ public class Character : Actor
 
 		void OnTriggerEnter(Collider other){
 			if(other.tag == "EnemyDamage"){
-				if((other.GetComponentInParent(typeof(EnemyMutant)) as EnemyMutant).IsAttacking) _lifeController.TakeDamage(40);
+				Debug.Log("hit by moster");
+				if((other.GetComponentInParent(typeof(EnemyMutant)) as EnemyMutant).IsAttacking){
+					Debug.Log("Was in attack mode");
+					_lifeController.TakeDamage(40);
+				}else{
+					Debug.Log("Was not in attack mode");
+				} 
 			}else if(other.tag == "Health"){
 				if(_lifeController.CurrentLife != _lifeController.MaxLife){
 					ICurable c = (other.GetComponentInParent(typeof(HealthPack)) as HealthPack);
@@ -168,6 +180,7 @@ public class Character : Actor
 				if(_hasKey){
 					Debug.Log("Should open door and load next level here");
 					//load next level
+					SceneManager.LoadScene(6, LoadSceneMode.Additive);
 				}
 			}
 		}
@@ -185,5 +198,6 @@ public class Character : Actor
 		void UnfreezeControllers(){
 			_areControllersFrozen = false;
 		}
+
 
 }

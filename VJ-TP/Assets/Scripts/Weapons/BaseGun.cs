@@ -22,38 +22,44 @@ public class BaseGun : MonoBehaviour, IBaseGun
 	private Renderer gunRenderer;
 		
 	public AudioSource audioSource;
-	private bool _areControllersFrozen;
+
+	private float rateOfFire => _stats.RateOfFire;
+	private float _shotCounter;
 
 
     private void Start() {
 		bulletInstanceTransform = transform.Find("BulletFireTransform");
 		gunRenderer = GetComponent<Renderer>();
       	Reload();
-      	EventsManager.instance.StartIntroCutscene += FreezeControllers;
-		EventsManager.instance.FinishIntroCutscene += UnfreezeControllers;
+      	_shotCounter = 0f;
     }
 
     public virtual void Attack() {
-    	if(!_areControllersFrozen){
-	        if (_bulletCount > 0) {
-						//create muzzle flash
-						Instantiate(muzzleFlashPrefab, bulletInstanceTransform.position, bulletInstanceTransform.rotation);
-						//create bullet
-	            var bullet = Instantiate(bulletPrefab, bulletInstanceTransform.position, bulletInstanceTransform.rotation);
-							bullet.name = "Bullet";
-	            bullet.GetComponent<Bullet>().SetOwner(this);
-	            _bulletCount--;
-	            UI_AmmoUpdater();
-	            audioSource.Play();
-	        }
-    	}
+    	Debug.Log(_shotCounter);
+    	_shotCounter++;
+        if (_bulletCount > 0) {
+        	if(_shotCounter >= rateOfFire){
+        		_shotCounter = 0;
+				Shoot();
+        	}
+        }
+    }
+
+    private void Shoot(){
+    	//create muzzle flash
+		Instantiate(muzzleFlashPrefab, bulletInstanceTransform.position, bulletInstanceTransform.rotation);
+		//create bullet
+        var bullet = Instantiate(bulletPrefab, bulletInstanceTransform.position, bulletInstanceTransform.rotation);
+		bullet.name = "Bullet";
+        bullet.GetComponent<Bullet>().SetOwner(this);
+        _bulletCount--;
+        UI_AmmoUpdater();
+        audioSource.Play();
     }
 
     public void Reload() {
-    	if(!_areControllersFrozen){
-	        _bulletCount = MagSize;
-	        UI_AmmoUpdater();
-    	}
+        _bulletCount = MagSize;
+        UI_AmmoUpdater();
     }
 
 	public void UI_AmmoUpdater() {
@@ -62,14 +68,6 @@ public class BaseGun : MonoBehaviour, IBaseGun
 			float bulletCountPercentage = (float)_bulletCount / MagSize;
 			//change emission color based on bullet count
 			gunRenderer.material.SetColor("_EmissionColor", new Color(bulletCountPercentage, 0, 0, 0));
-	}
-
-	void FreezeControllers(){
-		_areControllersFrozen = true;
-	}
-
-	void UnfreezeControllers(){
-		_areControllersFrozen = false;
 	}
 
 }
