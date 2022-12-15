@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +14,9 @@ public class HordeManager : MonoBehaviour {
 	[SerializeField] private GameObject exitTrigger;
 
 	[SerializeField] private Transform bossSpawnPoint;
-	[SerializeField] private Transform[] possibleSpawnPoints;
+
+	[SerializeField] private Transform[] possibleShortSpawnPoints;
+	[SerializeField] private Transform[] possibleLongSpawnPoints;
 
 	[SerializeField] private PostProcessVolume _postProcessVolume;
 
@@ -54,7 +55,7 @@ public class HordeManager : MonoBehaviour {
 
 	void StartHordes(){
 		_inHorde = true;
-		_enemyFactory.CreateN(_hordeStats.EnemyPrefab, possibleSpawnPoints, _hordeStats.EnemiesInFirstRound);
+		_enemyFactory.CreateN(_hordeStats.EnemyPrefab, possibleShortSpawnPoints, _hordeStats.EnemiesInFirstRound);
 		_aliveEnemyCount = _hordeStats.EnemiesInFirstRound;
 		mainRoomLight.color = Color.red;
 		_colorGrading.colorFilter.Interp(_colorGrading.colorFilter, redColorGrading, 1f);
@@ -64,6 +65,7 @@ public class HordeManager : MonoBehaviour {
 	//called every time every enemy from this round is killed
 	void FinishRound(){
 		_currentHorde++;
+		
 		switch(_currentHorde){
 			case 3:
 				//boss killed, should drop key
@@ -71,15 +73,12 @@ public class HordeManager : MonoBehaviour {
 				break;
 			case 2:
 				_aliveEnemyCount = 1;
-
-				Action spawnBoss = () => Instantiate(bossPrefab, bossSpawnPoint);
-				StartCoroutine(SleepAndFunc(10, spawnBoss)); 
-				
-				// Instantiate(bossPrefab, bossSpawnPoint);				RoundIndicator();
+				Instantiate(bossPrefab, bossSpawnPoint);
+				RoundIndicator();
 				break;
 			case 1:
 				//spawn second round of enemies
-				_enemyFactory.CreateN(_hordeStats.EnemyPrefab, possibleSpawnPoints, _hordeStats.EnemiesInSecondRound); 
+				_enemyFactory.CreateN(_hordeStats.EnemyPrefab, possibleLongSpawnPoints, _hordeStats.EnemiesInSecondRound); 
 				_aliveEnemyCount = _hordeStats.EnemiesInSecondRound;
 				RoundIndicator();
 				break;
@@ -112,11 +111,7 @@ public class HordeManager : MonoBehaviour {
 		hordeIndicators[_currentHorde].material.SetColor("_EmissionColor", Color.red);
 		//also add sound
 	}
-	
-	IEnumerator SleepAndFunc(float seconds, Action func)
-	{
-		yield return new WaitForSeconds(seconds);
-		func();
-	}
+
+
 
 }
