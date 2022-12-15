@@ -177,6 +177,7 @@ public class Character : Actor
 			} else if(other.tag == "Key"){
 				_hasKey = true;
 				Destroy(other.gameObject);
+				EventsManager.instance.PlayScapeVoiceLine();
 			} else if(other.tag == "NextLevel"){
 				if(_hasKey){
 					EventsManager.instance.EndLevel1();
