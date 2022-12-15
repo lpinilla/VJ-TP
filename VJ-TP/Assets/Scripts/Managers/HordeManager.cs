@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
 
 public class HordeManager : MonoBehaviour {
 
@@ -13,6 +15,9 @@ public class HordeManager : MonoBehaviour {
 
 	[SerializeField] private Transform bossSpawnPoint;
 	[SerializeField] private Transform[] possibleSpawnPoints;
+
+	[SerializeField] private PostProcessVolume _postProcessVolume;
+
 
 	public int CurrentHored => _currentHorde;
 	private int _currentHorde;
@@ -27,6 +32,13 @@ public class HordeManager : MonoBehaviour {
 
 	[SerializeField] private int _aliveEnemyCount;
 
+	private ColorGrading _colorGrading;
+	private ColorParameter originalColorGrading;
+	[SerializeField] private ColorParameter redColorGrading;
+	[SerializeField] private ColorParameter blueColorGrading;
+	[SerializeField] private float colorTransitionTime;
+
+
 	void Start(){
 		_inHorde = false;
 		_currentHorde = 0;
@@ -35,23 +47,22 @@ public class HordeManager : MonoBehaviour {
 		_aliveEnemyCount = 0;
 		EventsManager.instance.EnemyDeathEvent += OneLessEnemy;
 		EventsManager.instance.StartHordesEvent += StartHordes;
-
+		_postProcessVolume.profile.TryGetSettings(out _colorGrading);
+		originalColorGrading = _colorGrading.colorFilter;
 	}
 
 	void StartHordes(){
-		Debug.Log("Start Round");
-		Debug.Log(_hordeStats.EnemiesInFirstRound);
 		_inHorde = true;
 		_enemyFactory.CreateN(_hordeStats.EnemyPrefab, possibleSpawnPoints, _hordeStats.EnemiesInFirstRound);
 		_aliveEnemyCount = _hordeStats.EnemiesInFirstRound;
 		mainRoomLight.color = Color.red;
+		_colorGrading.colorFilter.Interp(_colorGrading.colorFilter, redColorGrading, 1f);
 		RoundIndicator();
 	}
 
 	//called every time every enemy from this round is killed
 	void FinishRound(){
 		_currentHorde++;
-		
 		switch(_currentHorde){
 			case 3:
 				//boss killed, should drop key
@@ -85,6 +96,8 @@ public class HordeManager : MonoBehaviour {
 		for(int i = 0 ; i < hordeIndicators.Length; i++){
 			hordeIndicators[i].material.SetColor("_EmissionColor", Color.green);
 		}
+		_colorGrading.colorFilter.Interp(_colorGrading.colorFilter, blueColorGrading, 1);
+		//spawn key
 		Vector3 keySpawn = bossSpawnPoint.position + new Vector3(0, 1f, 0);
 		Instantiate(keyPrefab, keySpawn, Quaternion.identity);
 		//enable trigger
@@ -95,6 +108,5 @@ public class HordeManager : MonoBehaviour {
 		hordeIndicators[_currentHorde].material.SetColor("_EmissionColor", Color.red);
 		//also add sound
 	}
-
 
 }
