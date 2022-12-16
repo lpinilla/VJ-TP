@@ -67,6 +67,9 @@ public class Character : Actor
 
 	private float shotCounter = 0;
 	private bool _isFiring = false;
+	
+	private bool charger = false;
+
 
 	private void Start()
     {
@@ -89,6 +92,9 @@ public class Character : Actor
 		EventsManager.instance.StartIntroCutscene += FreezeControllers;
 		EventsManager.instance.FinishIntroCutscene += UnfreezeControllers;
 		EventsManager.instance.Level1FinaleEvent += LoadTunnel;
+		
+		StartCoroutine(LoadAsync());
+		
     }
 
     void Update() {
@@ -210,9 +216,9 @@ public class Character : Actor
 
 		void LoadTunnel()
 		{
+			charger = true;
 			// StartCoroutine(LoadAsync());
-			SceneManager.LoadScene("Tunnel", LoadSceneMode.Additive);
-			TunnelEntrance.SetBool("isOpen",true);
+			// SceneManager.LoadScene("Tunnel", LoadSceneMode.Additive);
 		}
 
 		
@@ -221,14 +227,30 @@ public class Character : Actor
 		{
 			AsyncOperation operation = SceneManager.LoadSceneAsync("Tunnel", LoadSceneMode.Additive);
 			operation.allowSceneActivation = false;
+			Debug.Log("in");			
 
-			while (!operation.isDone)
+			while (operation.progress >= .9f)//!operation.isDone)
 			{
 
-				if(operation.progress >= .9f) operation.allowSceneActivation = true;
+				// if(operation.progress >= .9f) operation.allowSceneActivation = true;
             
 				yield return null;
 			}
+			while (!charger)
+			{
+				yield return null;
+			}
+
+			Debug.Log("charger true");
+			operation.allowSceneActivation = true;
+			while (!operation.isDone)
+			{
+				yield return null;
+			}
+
+			yield return new WaitForSeconds(2f);
+			Debug.Log("Open SESAMO");
+			TunnelEntrance.SetBool("isOpen",true);
 		}
 
 }
