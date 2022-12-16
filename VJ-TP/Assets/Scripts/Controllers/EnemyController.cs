@@ -75,7 +75,8 @@ public class EnemyController : MonoBehaviour, IEnemy
     void setColliderState(bool state){
         colliders = GetComponentsInChildren<Collider>();
         foreach (Collider collider in colliders){
-            collider.enabled = state;
+	        if(collider.tag != "EnemyDamage") collider.enabled = state;
+            // collider.enabled = state;
         }
         gameObject.GetComponent<Collider>().enabled = !state;
 

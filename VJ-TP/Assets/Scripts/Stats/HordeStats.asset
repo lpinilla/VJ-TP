@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _HordeStatsValues:
     EnemyPrefab: {fileID: 767590981668626364, guid: e80b6b7e65826c44f81ad7173d953063, type: 3}
-    EnemiesInFirstRound: 1
-    EnemiesInSecondRound: 1
+    EnemiesInFirstRound: 7
+    EnemiesInSecondRound: 8

@@ -189,7 +189,9 @@ public class Character : Actor
 			} else if(other.tag == "TunnelExit"){
 				EventsManager.instance.StartLevel2();
 				Destroy(other.gameObject);
-		}
+			} else if (other.tag == "ExitGame"){
+				SceneManager.LoadScene("Victory");
+			}
 		}
 
 		public void ChangeHealthIndicator(float currHealth, float MaxHealth){
@@ -208,15 +210,16 @@ public class Character : Actor
 
 		void LoadTunnel()
 		{
-			StartCoroutine(LoadAsync("Tunnel"));
+			// StartCoroutine(LoadAsync());
+			SceneManager.LoadScene("Tunnel", LoadSceneMode.Additive);
 			TunnelEntrance.SetBool("isOpen",true);
 		}
 
 		
 		
-		IEnumerator LoadAsync(String name)
+		IEnumerator LoadAsync()
 		{
-			AsyncOperation operation = SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
+			AsyncOperation operation = SceneManager.LoadSceneAsync("Tunnel", LoadSceneMode.Additive);
 			operation.allowSceneActivation = false;
 
 			while (!operation.isDone)

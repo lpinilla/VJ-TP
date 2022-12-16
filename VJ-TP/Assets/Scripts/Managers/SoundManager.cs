@@ -51,9 +51,10 @@ public class SoundManager : MonoBehaviour
 
     public void PlayVoice()
     {
-        Source.PlayOneShot(ClipVoice);
-        Action act = PlayChillMusic;
-        StartCoroutine(WaitForSound(act));
+        // Source.PlayOneShot(ClipVoice);
+        // Action act = PlayChillMusic;
+        // StartCoroutine(WaitForSound(act));
+        PlayChillMusic();
     }
     public void PlayChillMusic()
     {

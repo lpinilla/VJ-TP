@@ -47,7 +47,7 @@ public class HordeManager : MonoBehaviour {
 		_currentHorde = 0;
 		_mainRoomLightStartingColor = mainRoomLight.color;
 		_enemyFactory = new Spawner<Enemy>();
-		_aliveEnemyCount = 0;
+		_aliveEnemyCount = 1;
 		EventsManager.instance.EnemyDeathEvent += OneLessEnemy;
 		EventsManager.instance.StartHordesEvent += StartHordes;
 		_postProcessVolume.profile.TryGetSettings(out _colorGrading);
