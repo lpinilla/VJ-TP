@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -72,8 +73,13 @@ public class HordeManager : MonoBehaviour {
 				FinishHordes();
 				break;
 			case 2:
+				EventsManager.instance.StartBossMusic();
 				_aliveEnemyCount = 1;
-				Instantiate(bossPrefab, bossSpawnPoint);
+				
+				Action spawnBoss = () => Instantiate(bossPrefab, bossSpawnPoint);
+				StartCoroutine(SleepAndFunc(6, spawnBoss)); 
+				
+				// Instantiate(bossPrefab, bossSpawnPoint);
 				RoundIndicator();
 				break;
 			case 1:
@@ -111,7 +117,12 @@ public class HordeManager : MonoBehaviour {
 		hordeIndicators[_currentHorde].material.SetColor("_EmissionColor", Color.red);
 		//also add sound
 	}
-
+	
+	IEnumerator SleepAndFunc(float seconds, Action func)
+	{
+		yield return new WaitForSeconds(seconds);
+		func();
+	}
 
 
 }
